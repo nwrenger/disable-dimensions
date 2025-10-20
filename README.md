@@ -24,6 +24,10 @@ You can configure it using the config panel:
 >
 > ![igniting_nether_portal](igniting_nether_portal.gif)
 
+> Throwing Ender Pearl at Nether Portal
+>
+> ![pearl_nether_portal](pearl_nether_portal.gif)
+
 > Activating End Portal (Outside)
 >
 > ![end_portal_outside](end_portal_outside.gif)
@@ -32,9 +36,13 @@ You can configure it using the config panel:
 >
 > ![end_portal_inside](end_portal_inside.gif)
 
+> Throwing Ender Pearl at End Portal
+>
+> ![pearl_end_portal](pearl_end_portal.gif)
+
 ## Performance Notice
 
-Be aware that this datapack performs a small 5×5×5 scan per player per tick when dimension blocking is enabled.
+Be aware that this datapack performs two small 5×4×5 blocks scans per player and per ender pearl entity per tick when dimensions are disabled (a total of **200 blocks per player and per ender pearl per tick**, or **100** if only one, The Nether or The End, is disabled).
 
 This is extremely lightweight under normal server loads (≤0.1 ms/tick for <20 players).
 If your server hosts dozens of players simultaneously, you might need to use a different solution. But as far as I’m aware, any datapack-based solution that’s as safe as mine requires this kind of scanning to work!

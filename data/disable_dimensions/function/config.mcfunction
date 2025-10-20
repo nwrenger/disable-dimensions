@@ -1,6 +1,6 @@
 tellraw @s ""
 
-tellraw @s ["",{"text":"Disable Dimensions","bold":true,"color":"gold"},{"text":" by "},{"text":"nwrenger","color":"#F223F2","click_event":{"action":"open_url","url":"https://nwrenger.dev"}}," - Config\n"]
+tellraw @s ["",{"text":"Disable Dimensions","bold":true,"color":"gold"},{"text":" by "},{"text":"nwrenger","italic":true,"color":"#F223F2","click_event":{"action":"open_url","url":"https://nwrenger.dev"}}," - Config\n"]
 
 execute if data storage disable_dimensions:config {nether:true} run tellraw @s ["",{color:"#d414e5",text:"Nether Portals: "},{color:"green",text:"☑",click_event:{action:"run_command",command:"function disable_dimensions:config/disable_nether"},hover_event:{action:"show_text",value:["",{color:"dark_purple",text:"Nether Portals "},{color:"white",text:"are "},{color:"gold",text:"now "},{color:"green",text:"enabled"}]}}]
 execute if data storage disable_dimensions:config {nether:false} run tellraw @s ["",{color:"#d414e5",text:"Nether Portals: "},{color:"red",text:"☒",click_event:{action:"run_command",command:"function disable_dimensions:config/enable_nether"},hover_event:{action:"show_text",value:["",{color:"dark_purple",text:"Nether Portals "},{color:"white",text:"are "},{color:"gold",text:"now "},{color:"red",text:"disabled"}]}}]

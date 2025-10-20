@@ -55,8 +55,8 @@ I warmly welcome:
 - Feature requests
 - Pull requests
 
-Please open issues or PRs on [GitHub](https://github.com/nwrenger/clash/issues).
+Please open issues or PRs on [GitHub](https://github.com/nwrenger/disable-dimensions/issues).
 
 ## License
 
-This project is licensed under the **MIT License**. See [LICENSE](./LICENSE) for details.
+This project is licensed under the **MIT License**. See [LICENSE](https://github.com/nwrenger/disable-dimensions/blob/main/LICENSE) for details.

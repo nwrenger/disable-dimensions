@@ -1,5 +1,8 @@
 # Disable Dimensions
 
+[![modrinth](https://img.shields.io/modrinth/v/disable-dimensions.svg)](https://modrinth.com/datapack/disable-dimensions)
+[![modrinth](https://img.shields.io/modrinth/game-versions/disable-dimensions.svg)](https://modrinth.com/datapack/disable-dimensions)
+
 A **hard-to-break, grief-resistant solution** for preventing players from entering specific dimensions in vanilla Minecraft.
 
 Allows you to disable dimensions by removing any possible way for players to enter them. Each dimension can be separately `enabled` or `disabled`.

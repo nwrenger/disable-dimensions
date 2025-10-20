@@ -4,6 +4,6 @@
     "min_format": 71,
 	"max_format": 88.0,
 	"supported_formats": { "min_inclusive": 71, "max_inclusive": 88.0 },
-    "description": "Disable Vanilla Dimensions like The Nether & End"
+    "description": "Disable Vanilla Dimensions like The Nether & The End"
   }
 }

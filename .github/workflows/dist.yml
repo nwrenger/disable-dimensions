@@ -1,0 +1,35 @@
+name: Package datapack on release
+
+on:
+  release:
+    types: [created]
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-attach-zip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Compute filename
+        id: vars
+        run: |
+          echo "NAME=disable-dimensions-v${{ github.event.release.tag_name }}.zip" >> "$GITHUB_OUTPUT"
+
+      - name: Create zip (pack.mcmeta + data/)
+        run: |
+          set -euo pipefail
+          test -f pack.mcmeta
+          test -d data
+          zip -r "${{ steps.vars.outputs.NAME }}" pack.mcmeta data
+
+      - name: Attach zip to release
+        uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: ${{ steps.vars.outputs.NAME }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -16,13 +16,13 @@ You can configure it using the config panel:
 
 ## Showcase
 
-> Igniting Nether Portal
->
-> ![igniting_nether_portal](igniting_nether_portal.gif)
-
 > Already lit Nether Portal
 >
 > ![lit_nether_portal](lit_nether_portal.gif)
+
+> Igniting Nether Portal
+>
+> ![igniting_nether_portal](igniting_nether_portal.gif)
 
 > Activating End Portal (Outside)
 >

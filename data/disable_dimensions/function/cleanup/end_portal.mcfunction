@@ -10,7 +10,10 @@ execute if predicate disable_dimensions:above_world_ceiling run execute store su
 # Otherwise use the normal centered 5×4×5 (-1..+2)
 execute unless predicate disable_dimensions:below_world_floor unless predicate disable_dimensions:above_world_ceiling run execute store success storage disable_dimensions:tmp removed byte 1 run fill ~-2 ~-1 ~-2 ~2 ~2 ~2 air replace minecraft:end_portal
 
-# Only if something was actually removed, show feedback and pop the eyes of the end portal frames
+# Pop the eyes of the end portal frames
 function disable_dimensions:cleanup/pop_eyes
-execute if entity @s[type=player] if data storage disable_dimensions:tmp {removed:1b} run title @s actionbar {text:"The End rejects your presence...", color:"light_purple"}
-execute if entity @s[type=player] if data storage disable_dimensions:tmp {removed:1b} run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.5
+
+# Show feedback
+# Always get player to display the message
+execute if entity @s[type=player] run function disable_dimensions:cleanup/end_message
+execute if entity @s[type=ender_pearl] on origin run function disable_dimensions:cleanup/end_message

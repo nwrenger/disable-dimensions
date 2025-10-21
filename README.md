@@ -46,7 +46,7 @@ You can configure it using the config panel:
 
 ## Performance Notice
 
-Be aware that this datapack performs two small 5×4×5 block scans per player and per ender pearl entity per tick when dimensions are disabled (a total of **200 blocks per player and per ender pearl per tick**, or **100** if only one, The Nether or The End, is disabled).
+Be aware that this datapack/mod performs two small 5×4×5 block scans per player and per ender pearl entity per tick when dimensions are disabled (a total of **200 blocks per player and per ender pearl per tick**, or **100** if only one, The Nether or The End, is disabled).
 
 Through testing with `/spark tps`, the average cost was measured at around **0.01–0.011 ms per entity per tick**. Even with **800 pearls**, the server’s median tick time only increased by about **8–9 ms**, which equals roughly **+2 ms/tick at 200 players** and **<0.3 ms/tick below 30 players**.
 

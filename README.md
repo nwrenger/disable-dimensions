@@ -4,7 +4,7 @@
 [![modrinth](https://img.shields.io/badge/dynamic/json?url=https://api.modrinth.com/v2/project/disable-dimensions&label=downloads&query=$.downloads&color=#00AF5C)](https://modrinth.com/datapack/disable-dimensions)
 [![modrinth](https://img.shields.io/modrinth/game-versions/disable-dimensions.svg)](https://modrinth.com/datapack/disable-dimensions)
 
-A **hard-to-break, grief-resistant solution** for preventing players from entering specific dimensions in vanilla Minecraft.
+A **hard-to-break, grief-resistant solution** for preventing players from entering **The Nether** and/or **The End**.
 
 Allows you to disable dimensions by removing any possible way for players to enter them. Each dimension can be separately `enabled` or `disabled`.
 

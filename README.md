@@ -52,7 +52,7 @@ Through testing with `/spark tps`, the average cost was measured at around **0.0
 
 This is extremely lightweight under normal server loads and will not noticeably affect performance. If your server hosts hundreds of players simultaneously, you might need to use a different solution. But as far as I’m aware, any datapack-based solution that’s as safe as mine requires this kind of scanning to work!
 
-> Testing was done on a MacBook Pro 14" (M1 Pro), representing typical mid-range modern hardware.
+> Testing was done on a MacBook Pro 14" (M1 Pro).
 
 ## Contributing & Issues
 

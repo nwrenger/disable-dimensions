@@ -12,5 +12,5 @@ execute unless predicate disable_dimensions:below_world_floor unless predicate d
 
 # Show feedback
 # Always get player to display the message
-execute if entity @s[type=player] run function disable_dimensions:cleanup/nether_message
-execute if entity @s[type=ender_pearl] on origin run function disable_dimensions:cleanup/nether_message
+execute if entity @s[type=player] run function disable_dimensions:cleanup/nether/message
+execute if entity @s[type=ender_pearl] on origin run function disable_dimensions:cleanup/nether/message

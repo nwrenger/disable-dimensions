@@ -8,7 +8,7 @@ A **hard-to-break, grief-resistant solution** for preventing players from enteri
 
 Allows you to disable dimensions by removing any possible way for players to enter them. Each dimension can be separately `enabled` or `disabled`.
 
-> Perfect for vanilla multiplayer servers where you want to disable further dimensions to prevent players from progressing too fast.
+> Perfect for vanilla and modded multiplayer servers where you want to disable further dimensions to prevent players from progressing too fast.
 
 ## Configuration
 

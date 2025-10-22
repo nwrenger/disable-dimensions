@@ -22,27 +22,27 @@ You can configure it using the config panel:
 
 > Already lit Nether Portal
 >
-> ![lit_nether_portal](lit_nether_portal.gif)
+> ![lit_nether_portal](showcase/lit_nether_portal.gif)
 
 > Igniting Nether Portal
 >
-> ![igniting_nether_portal](igniting_nether_portal.gif)
+> ![igniting_nether_portal](showcase/igniting_nether_portal.gif)
 
 > Throwing Ender Pearl at Nether Portal
 >
-> ![pearl_nether_portal](pearl_nether_portal.gif)
+> ![pearl_nether_portal](showcase/pearl_nether_portal.gif)
 
 > Activating End Portal (Outside)
 >
-> ![end_portal_outside](end_portal_outside.gif)
+> ![end_portal_outside](showcase/end_portal_outside.gif)
 
 > Activating End Portal (Inside)
 >
-> ![end_portal_inside](end_portal_inside.gif)
+> ![end_portal_inside](showcase/end_portal_inside.gif)
 
 > Throwing Ender Pearl at End Portal
 >
-> ![pearl_end_portal](pearl_end_portal.gif)
+> ![pearl_end_portal](showcase/pearl_end_portal.gif)
 
 ## Performance Notice
 

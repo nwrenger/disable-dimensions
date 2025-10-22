@@ -50,7 +50,7 @@ Be aware that this data pack/mod performs two small 5×5×5 block scans per play
 
 Through testing with `/spark tps` and `lithium`, an optimization mod, the average cost was measured at around **0.011–0.012 ms per entity per tick**. Even with **800 pearls**, the server’s median tick time only increased by about **9–10 ms**, which equals roughly **+2 ms/tick at 200 players** and **<0.3 ms/tick below 30 players**.
 
-This is extremely lightweight under normal server loads and will not noticeably affect performance. If your server hosts hundreds of players simultaneously, you might need to use a different solution. But as far as I’m aware, any datapack-based solution that’s as safe as mine requires this kind of scanning to work!
+This is extremely lightweight under normal server loads and will not noticeably affect performance. If your server hosts hundreds of players simultaneously, you might need to use a different solution. But as far as I’m aware, any data pack based solution that’s as safe as mine requires this kind of scanning to work!
 
 > Testing was done on a MacBook Pro 14" (M1 Pro).
 

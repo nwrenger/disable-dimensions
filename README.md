@@ -10,6 +10,28 @@ Allows you to disable dimensions by removing any possible way for players to ent
 
 > Perfect for vanilla and modded multiplayer servers where you want to disable further dimensions to prevent players from progressing too fast.
 
+## Why use this data pack/mod?
+
+- **No other data pack based solution** still works for the current Minecraft versions.
+  All the older ones are outdated or broken.
+- Works in **every realistic situation**: for players in all game modes, ender pearls, minecarts, thrown items, teleport events near portals, and more.
+  Everything inside a **7×7×7 range** around both **players and ender pearls** is safely covered.
+- At the **extreme world edges** (around **Y = −61** and **Y = 316**), the scan range is **vertically reduced by 3 blocks** to prevent errors.
+  - It scans a **7×4×7 range** there, skipping:
+    - the **lowest 3 blocks** at the bottom edge, and
+    - the **highest 3 blocks** at the top edge.
+  - Horizontally moving entities remain fully covered.
+    Only **very fast vertically moving or falling entities** could theoretically pass through these narrow vertical bands, but this makes such cases effectively unreachable in normal gameplay:
+    - **Nether portals cannot be built vertically enterable**.
+    - **End portals never generate at those heights**.
+- Works as either a **global mod** or a **world-specific data pack**, depending on how you want to use it.
+- Built to be **grief-resistant, reliable, and lightweight**, making it perfect for public or semi-public multiplayer servers.
+- Fully compatible with **vanilla and modded setups**, tested to work out of the box.
+- Can be configured in **real time** through the **in-game config panel**,
+  no reloads or restarts required.
+
+> A stable and lightweight way to stop unwanted dimension travel, made to just work.
+
 ## Configuration
 
 You can configure it using the config panel:
@@ -20,27 +42,27 @@ You can configure it using the config panel:
 
 ## Showcase
 
-> Already lit Nether Portal
+> **Already lit Nether Portal**
 >
 > ![lit_nether_portal](showcase/lit_nether_portal.gif)
 
-> Igniting Nether Portal
+> **Igniting Nether Portal**
 >
 > ![igniting_nether_portal](showcase/igniting_nether_portal.gif)
 
-> Throwing Ender Pearl at Nether Portal
+> **Throwing Ender Pearl at Nether Portal**
 >
 > ![pearl_nether_portal](showcase/pearl_nether_portal.gif)
 
-> Activating End Portal (Outside)
+> **Activating End Portal (Outside)**
 >
 > ![end_portal_outside](showcase/end_portal_outside.gif)
 
-> Activating End Portal (Inside)
+> **Activating End Portal (Inside)**
 >
 > ![end_portal_inside](showcase/end_portal_inside.gif)
 
-> Throwing Ender Pearl at End Portal
+> **Throwing Ender Pearl at End Portal**
 >
 > ![pearl_end_portal](showcase/pearl_end_portal.gif)
 

@@ -1,8 +1,8 @@
 # In a 7x7x7 range scan for stuff and replace them
-$execute store success storage disable_dimensions:tmp removed byte 1 run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace $(block)
+$execute unless predicate disable_dimensions:near_bottom unless predicate disable_dimensions:near_top store success storage disable_dimensions:tmp removed byte 1 run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace $(block)
 
 # Fallback to y = 0..3
-$execute unless data storage disable_dimensions:tmp {removed:1b} store success storage disable_dimensions:tmp removed byte 1 run fill ~-3 ~ ~-3 ~3 ~3 ~3 air replace $(block)
+$execute if predicate disable_dimensions:near_bottom store success storage disable_dimensions:tmp removed byte 1 run fill ~-3 ~ ~-3 ~3 ~3 ~3 air replace $(block)
 
 # Fallback to y = -3..0
-$execute unless data storage disable_dimensions:tmp {removed:1b} store success storage disable_dimensions:tmp removed byte 1 run fill ~-3 ~-3 ~-3 ~3 ~ ~3 air replace $(block)
+$execute if predicate disable_dimensions:near_top store success storage disable_dimensions:tmp removed byte 1 run fill ~-3 ~-3 ~-3 ~3 ~ ~3 air replace $(block)

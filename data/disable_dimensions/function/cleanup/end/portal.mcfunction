@@ -7,7 +7,5 @@ execute unless data storage disable_dimensions:tmp {removed:1b} run return fail
 # Pop the eyes of the end portal frames
 function disable_dimensions:each_inside_cube/execute {path:"disable_dimensions:cleanup/end/pop_eye"}
 
-# Show feedback
-# Always get player to display the message
-execute if entity @s[type=player] run function disable_dimensions:cleanup/end/message
-execute if entity @s[type=ender_pearl] on origin run function disable_dimensions:cleanup/end/message
+# Show feedback on player
+function disable_dimensions:on_player {path:"disable_dimensions:cleanup/end/message"}

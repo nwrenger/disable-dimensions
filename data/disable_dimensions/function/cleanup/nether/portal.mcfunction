@@ -4,7 +4,5 @@ function disable_dimensions:cleanup/remove {block:"minecraft:nether_portal"}
 # When frames got removed, unless return early
 execute unless data storage disable_dimensions:tmp {removed:1b} run return fail
 
-# Show feedback
-# Always get player to display the message
-execute if entity @s[type=player] run function disable_dimensions:cleanup/nether/message
-execute if entity @s[type=ender_pearl] on origin run function disable_dimensions:cleanup/nether/message
+# Show feedback on player
+function disable_dimensions:on_player {path:"disable_dimensions:cleanup/nether/message"}

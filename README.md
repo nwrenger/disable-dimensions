@@ -48,7 +48,7 @@ You can configure it using the config panel:
 
 Be aware that this data pack/mod performs two small 7x7x7 block scans per player and per ender pearl entity per tick when dimensions are disabled (a total of **686 blocks per player and per ender pearl per tick**, or **343** if only one, The Nether or The End, is disabled).
 
-Through testing in vanilla with `f3 + 2`, the average cost was measured at around **0.085 ms per entity per tick**. Even with **400 pearls**, the server’s median tick time increased by only about **34 ms**, which equals roughly **+17 ms/tick at 200 players** and **<2.55 ms/tick below 30 players**.
+Through testing in vanilla with `f3 + 2`, the average cost was measured at around **0.034 ms per entity per tick**. Even with **800 pearls**, the server’s median tick time increased only by about **27 ms**, which equals roughly **+6.75 ms/tick at 200 players** and **<1 ms/tick below 30 players**.
 
 This is extremely lightweight under normal server loads and will not noticeably affect performance. If your server hosts hundreds of players simultaneously, you might need to use a different solution. But as far as I’m aware, any data pack based solution that’s as safe as mine requires this kind of scanning to work!
 

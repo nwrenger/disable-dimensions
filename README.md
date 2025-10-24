@@ -15,11 +15,9 @@ Allows you to disable dimensions by removing any possible way for players to ent
 1. **Only Available Solution**:
    No other data pack based solution still works for the current Minecraft versions.
    All older ones are outdated or broken.
-
 2. **Comprehensive Coverage**:
    Works in every realistic situation. For players in all game modes, ender pearls, minecarts, thrown items, teleport events near portals, and more.
    Everything inside a **7×7×7 range** around both **players and ender pearls** is safely covered.
-
 3. **Edge-Safe Logic**:
    At the extreme world edges (around **Y = −61** and **Y = 316**), the scan range is **vertically reduced by 3 blocks** to prevent errors.
    It scans a **7×4×7 range**, skipping the lowest 3 blocks at the bottom edge and the highest 3 blocks at the top edge.
@@ -27,13 +25,10 @@ Allows you to disable dimensions by removing any possible way for players to ent
    Only **very fast vertically moving or falling entities** could theoretically pass through these narrow vertical bands, but such cases are effectively unreachable in normal gameplay:
    - **Nether portals cannot be built vertically enterable**.
    - **End portals never generate at those heights**.
-
 4. **Flexible and Compatible**:
    Works as either a **global mod** or a **world-specific data pack**, fully compatible with both **vanilla and modded setups** right out of the box.
-
 5. **Server-Ready**:
    Built to be **reliable, lightweight, and grief-resistant**, making it perfect for public or semi-public multiplayer servers.
-
 6. **Dynamic Configuration**:
    Can be adjusted in **real time** through the **in-game config panel**, no reloads or restarts required.
 

@@ -43,7 +43,7 @@ You **have** to set the **World Spawn** once through it:
 
 ## Showcase
 
-> **'Going through' Nether Portal**
+> **'Going Through' Nether Portal**
 >
 > ![through_nether_portal](showcase/through_nether_portal.gif)
 
@@ -51,7 +51,7 @@ You **have** to set the **World Spawn** once through it:
 >
 > ![pearl_nether_portal](showcase/pearl_nether_portal.gif)
 
-> **'Going through' End Portal**
+> **'Going Through' End Portal**
 >
 > ![through_end_portal](showcase/through_end_portal.gif)
 

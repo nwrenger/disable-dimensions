@@ -1,0 +1,15 @@
+{
+  "parent": "disable_dimensions:root",
+  "criteria": {
+    "entered": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "from": "minecraft:overworld",
+        "to": "minecraft:the_nether"
+      }
+    }
+  },
+  "rewards": {
+    "function": "disable_dimensions:nether/main"
+  }
+}

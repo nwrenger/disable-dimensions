@@ -23,8 +23,8 @@ Allows you to disable dimensions by removing any possible way for players to ent
    It scans a **7×4×7 range**, skipping the lowest 3 blocks at the bottom edge and the highest 3 blocks at the top edge.
    Horizontally moving entities remain fully covered.
    Only **very fast vertically moving or falling entities** could theoretically pass through these narrow vertical bands, but such cases are effectively unreachable in normal gameplay:
-   - **Nether portals cannot be built vertically enterable**.
-   - **End portals never generate at those heights**.
+   - Nether portals cannot be built vertically enterable.
+   - End portals never generate at those heights.
 4. **Flexible and Compatible**:
    Works as either a **global mod** or a **world-specific data pack**, fully compatible with both **vanilla and modded setups** right out of the box.
 5. **Server-Ready**:

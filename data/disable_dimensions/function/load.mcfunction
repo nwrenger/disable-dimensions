@@ -1,5 +1,5 @@
 # Setup storage defualts if they don't exist
-execute unless data storage disable_dimensions:config {init:true} run function disable_dimensions:config/defaults
+execute unless data storage disable_dimensions:config {init:true,world_spawn:{}} run function disable_dimensions:config/defaults
 
 # Init Message
 tellraw @a ""

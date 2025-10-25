@@ -17,47 +17,52 @@ Allows you to disable dimensions by removing any possible way for players to ent
    All older ones are outdated or broken.
 2. **Comprehensive Coverage**:
    Works in every realistic situation. For players in all game modes, ender pearls, minecarts, and more.
-   Players **can enter** portals, but are instantly **teleported back**. From the Nether to their **entry point**, and from the End to their **respawn** or **world spawn**.
+   Players can enter portals, but are instantly teleported back. From the Nether to their entry point, and from the End to their respawn or world spawn.
 3. **Intended Vanilla Reward**:
-   Players who try to swap dimensions will still receive the **vanilla “entered dimension” advancement** (for the Nether or the End).
-   This is **intentional** and serves as a small reward for their attempt. Don’t worry, they’ll get teleported back safely!
+   Players who try to swap dimensions will still receive the vanilla “entered dimension” advancement (for the Nether or the End).
+   This is intentional and serves as a small reward for their attempt. And you know who tried by checking their achievements. Don’t worry, they’ll get teleported back safely!
 4. **Immersive Feedback**:
-   On teleport back, players see a short **action bar** message and hear a **subtle sound cue**, making the experience clear and responsive without being intrusive.
+   On teleport back, players see a short action bar message and hear a subtle sound cue, making the experience clear and responsive without being intrusive.
 5. **Flexible and Compatible**:
-   Works as either a **global mod** or a **world-specific data pack**, fully compatible with both **vanilla and modded setups** right out of the box.
+   Works as either a global mod or a world-specific data pack, fully compatible with both vanilla and modded setups right out of the box.
 6. **Server-Ready**:
-   Built to be **reliable**, **grief-resistant**, and **completely passive**, with no extra overhead through tick-based checks. Perfect for public or semi-public multiplayer servers.
+   Built to be reliable, grief-resistant, and completely passive, with no extra overhead through tick-based checks. Perfect for public or semi-public multiplayer servers.
 7. **Dynamic Configuration**:
-   Can be adjusted in **real time** through the **in-game config panel**, no reloads or restarts required.
+   Can be adjusted in real time through the in-game config panel, no reloads or restarts required.
 
 > **TL;DR**: A stable and lightweight way to stop unwanted dimension travel, made to just work.
 
-## Configuration
+## Installation
 
-You can configure it using the config panel. It’s intractable with your mouse.
-You **have** to set the **World Spawn** once through it:
+After adding the data pack/mod to your world or server, you should see this confirmation message on login when the world loads:
+
+![through_nether_portal](showcase/screenshots/loaded.png)
+
+You can configure it using the config panel. It’s intractable with your mouse. You **must** set the **World Spawn** once through it. Make sure you’re standing at the desired spawn location when doing so:
 
 ```mcfunction
 /function disable_dimensions:config
 ```
 
+![through_nether_portal](showcase/screenshots/config_panel.png)
+
 ## Showcase
 
 > **'Going Through' Nether Portal**
 >
-> ![through_nether_portal](showcase/through_nether_portal.gif)
+> ![through_nether_portal](showcase/gifs/through_nether_portal.gif)
 
 > **Throwing Ender Pearl at Nether Portal**
 >
-> ![pearl_nether_portal](showcase/pearl_nether_portal.gif)
+> ![pearl_nether_portal](showcase/gifs/pearl_nether_portal.gif)
 
 > **'Going Through' End Portal**
 >
-> ![through_end_portal](showcase/through_end_portal.gif)
+> ![through_end_portal](showcase/gifs/through_end_portal.gif)
 
 > **Throwing Ender Pearl at End Portal**
 >
-> ![pearl_end_portal](showcase/pearl_end_portal.gif)
+> ![pearl_end_portal](showcase/gifs/pearl_end_portal.gif)
 
 ## Contributing & Issues
 

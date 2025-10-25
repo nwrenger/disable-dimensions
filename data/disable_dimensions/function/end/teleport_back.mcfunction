@@ -6,9 +6,11 @@ data modify storage disable_dimensions:tmp tp.x set from entity @a[tag=disable_d
 data modify storage disable_dimensions:tmp tp.y set from entity @a[tag=disable_dimensions_end_tp,limit=1] respawn.pos[1]
 data modify storage disable_dimensions:tmp tp.z set from entity @a[tag=disable_dimensions_end_tp,limit=1] respawn.pos[2]
 
-# Only execute if respawn exists in the overworld at a bed, otherwise fallback to worldspawn
+# Check if respawn at bed exists and set tmp
 data modify storage disable_dimensions:tmp tp.path set value "disable_dimensions:check_bed"
 execute as @a[tag=disable_dimensions_end_tp] run function disable_dimensions:positioned with storage disable_dimensions:tmp tp
+
+# Otherwise fallback to worldspawn and prepare tmp
 execute as @a[tag=disable_dimensions_end_tp] unless data storage disable_dimensions:tmp {tp:{bed_ok:true}} run function disable_dimensions:to_worldspawn {path:"disable_dimensions:end/tp"}
 
 execute if data storage disable_dimensions:tmp {tp:{bed_ok:true}} run function disable_dimensions:end/tp

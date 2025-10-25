@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:water",
+    "minecraft:lava",
+    "minecraft:fire",
+    "minecraft:soul_fire",
+    "minecraft:campfire",
+    "minecraft:soul_campfire",
+    "minecraft:powder_snow",
+    "minecraft:cactus",
+    "minecraft:sweet_berry_bush",
+    "minecraft:cobweb",
+    "minecraft:scaffolding",
+    "minecraft:magma_block"
+  ]
+}

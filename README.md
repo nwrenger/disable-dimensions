@@ -36,7 +36,7 @@ Allows you to disable dimensions by removing any possible way for players to ent
 
 After adding the data pack/mod to your world or server, you should see this confirmation message on login when the world loads:
 
-![through_nether_portal](showcase/screenshots/loaded.png)
+![loaded](showcase/screenshots/loaded.png)
 
 You can configure it using the config panel. It’s intractable with your mouse. You **must** set the **World Spawn** once through it. Make sure you’re standing at the desired spawn location when doing so:
 
@@ -44,7 +44,7 @@ You can configure it using the config panel. It’s intractable with your mouse.
 /function disable_dimensions:config
 ```
 
-![through_nether_portal](showcase/screenshots/config_panel.png)
+![config_panel](showcase/screenshots/config_panel.png)
 
 ## Showcase
 

@@ -34,7 +34,7 @@ Allows you to disable dimensions by removing any possible way for players to ent
 
 ## Configuration
 
-You can configure it using the config panel. It’s interactable with your mouse.
+You can configure it using the config panel. It’s intractable with your mouse.
 You **have** to set the **World Spawn** once through it:
 
 ```mcfunction

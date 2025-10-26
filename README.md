@@ -22,7 +22,7 @@ Allows you to disable dimensions by removing any possible way for players to ent
    Players who try to swap dimensions will still receive the vanilla “entered dimension” advancement (for the Nether or the End).
    This is intentional and serves as a small reward for their attempt. And you know who tried by checking their achievements. Don’t worry, they’ll get teleported back safely!
 4. **Immersive Feedback**:
-   On teleport back, players see a short action bar message, hear a subtle sound cue and get a slowness effect applied, making the experience clear and responsive without being intrusive.
+   On teleport back, players see a short action bar message and hear a subtle sound cue, making the experience clear and responsive without being intrusive.
 5. **Flexible and Compatible**:
    Works as either a global mod or a world-specific data pack, fully compatible with both vanilla and modded setups right out of the box.
 6. **Server-Ready**:

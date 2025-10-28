@@ -12,8 +12,8 @@ Allows you to disable dimensions by removing any possible way for players to ent
 
 ## Why use this data pack/mod?
 
-1. **Only Available Solution**:
-   No other data pack based solution still works for the current Minecraft versions.
+1. **Only Complete Solution**:
+   No other data pack currently disables both the Nether and the End for the current Minecraft versions.
    All older ones are outdated or broken.
 2. **Comprehensive Coverage**:
    Works in every realistic situation. For players in all game modes, ender pearls, minecarts, and more.

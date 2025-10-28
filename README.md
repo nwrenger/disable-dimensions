@@ -16,8 +16,8 @@ Allows you to disable dimensions by removing any possible way for players to ent
    No other data pack currently disables both the Nether and the End for the current Minecraft versions.
    All older ones are outdated or broken.
 2. **Comprehensive Coverage**:
-   Works in every realistic situation. For players in all game modes, ender pearls, minecarts, and more.
-   Players can enter portals, but are instantly teleported back. From the Nether to their entry point, and from the End to their respawn or world spawn.
+   Works in every situation. For players in all game modes, teleportation commands, ender pearls, minecarts, and more.
+   Players can enter portals/teleport, but are instantly teleported back. From the Nether to their entry point with a fallback to world spawn, and from the End to their respawn or world spawn.
 3. **Intended Vanilla Reward**:
    Players who try to swap dimensions will still receive the vanilla “entered dimension” advancement (for the Nether or the End).
    This is intentional and serves as a small reward for their attempt. And you know who tried by checking their achievements. Don’t worry, they’ll get teleported back safely!

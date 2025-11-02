@@ -56,6 +56,10 @@ You can configure it using the config panel. It’s intractable with your mouse.
 >
 > ![pearl_nether_portal](showcase/gifs/pearl_nether_portal.gif)
 
+> **Teleporting to The Nether**
+>
+> ![pearl_nether_portal](showcase/gifs/teleport_nether.gif)
+
 > **'Going Through' End Portal**
 >
 > ![through_end_portal](showcase/gifs/through_end_portal.gif)
@@ -63,6 +67,10 @@ You can configure it using the config panel. It’s intractable with your mouse.
 > **Throwing Ender Pearl at End Portal**
 >
 > ![pearl_end_portal](showcase/gifs/pearl_end_portal.gif)
+
+> **Teleporting to The End**
+>
+> ![pearl_nether_portal](showcase/gifs/teleport_nether.gif)
 
 ## Contributing & Issues
 

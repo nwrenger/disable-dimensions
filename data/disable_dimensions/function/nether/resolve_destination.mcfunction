@@ -1,5 +1,7 @@
 # Only execute if entered_nether_pos exists, otherwise fallback to worldspawn
-execute unless data entity @a[tag=disable_dimensions_nether_tp,limit=1] entered_nether_pos run return run function disable_dimensions:teleport/apply_world_spawn {path:"disable_dimensions:nether/perform_tp"}
+execute unless data entity @a[tag=disable_dimensions_nether_tp,limit=1] entered_nether_pos \
+    run return \
+    run function disable_dimensions:teleport/apply_world_spawn {path:"disable_dimensions:nether/perform_tp"}
 
 # Clear previous
 data remove storage disable_dimensions:tmp tp

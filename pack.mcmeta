@@ -1,9 +1,9 @@
 {
   "pack": {
-    "pack_format": 88.0,
+    "pack_format": 88,
     "min_format": 71,
-	"max_format": 88.0,
-	"supported_formats": { "min_inclusive": 71, "max_inclusive": 88.0 },
+    "max_format": 88,
+    "supported_formats": { "min_inclusive": 71, "max_inclusive": 88 },
     "description": "Disable vanilla Dimensions like The Nether and/or The End"
   }
 }

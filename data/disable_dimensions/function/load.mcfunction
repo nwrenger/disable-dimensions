@@ -6,7 +6,7 @@ execute unless data storage disable_dimensions:config {init:true,world_spawn:{}}
 tellraw @a [ \
     "\n", \
     {text:"Disable Dimensions",bold:true,color:"gold"}, \
-    {text:" by "}, \
+    " by ", \
     { \
         text:"nwrenger", \
         italic:true, \
@@ -36,7 +36,7 @@ tellraw @a [ \
         text:"function disable_dimensions:config", \
         italic:true, \
         color:"aqua", \
-        click_event:{action:"run_command","command":"function disable_dimensions:config"} \
+        click_event:{action:"run_command",command:"function disable_dimensions:config"} \
     }, \
     "\n" \
 ]

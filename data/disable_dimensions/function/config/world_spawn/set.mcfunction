@@ -1,6 +1,6 @@
 # Only allow setting in the Overworld
 execute unless dimension minecraft:overworld \
-    run title @s actionbar {"text":"Go to the Overworld at your desired spawn, then click again.","color":"yellow"}
+    run title @s actionbar {text:"Go to the Overworld at your desired spawn, then click again.",color:"yellow"}
 execute unless dimension minecraft:overworld \
     run return fail
 

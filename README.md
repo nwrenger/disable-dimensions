@@ -70,7 +70,7 @@ You can configure it using the config panel. It’s intractable with your mouse.
 
 > **Teleporting to The End**
 >
-> ![pearl_nether_portal](showcase/gifs/teleport_nether.gif)
+> ![pearl_end_portal](showcase/gifs/teleport_end.gif)
 
 ## Contributing & Issues
 

@@ -1,8 +1,3 @@
-# Only execute if entered_nether_pos exists, otherwise fallback to worldspawn
-execute unless data entity @a[tag=disable_dimensions_nether_tp,limit=1] entered_nether_pos \
-    run return \
-    run function disable_dimensions:teleport/apply_world_spawn {path:"disable_dimensions:nether/perform_tp"}
-
 # Clear previous
 data remove storage disable_dimensions:tmp tp
 
@@ -10,6 +5,10 @@ data remove storage disable_dimensions:tmp tp
 data modify storage disable_dimensions:tmp tp.x set from entity @a[tag=disable_dimensions_nether_tp,limit=1] entered_nether_pos[0]
 data modify storage disable_dimensions:tmp tp.y set from entity @a[tag=disable_dimensions_nether_tp,limit=1] entered_nether_pos[1]
 data modify storage disable_dimensions:tmp tp.z set from entity @a[tag=disable_dimensions_nether_tp,limit=1] entered_nether_pos[2]
+
+# Only teleport to entered_nether_pos if it exists, otherwise fallback to worldspawn
+execute unless data entity @a[tag=disable_dimensions_nether_tp,limit=1] entered_nether_pos \
+    run function disable_dimensions:teleport/apply_world_spawn
 
 function disable_dimensions:nether/perform_tp
 

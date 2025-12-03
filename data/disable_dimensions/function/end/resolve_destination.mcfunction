@@ -14,10 +14,9 @@ execute as @a[tag=disable_dimensions_end_tp] \
 # Otherwise fallback to worldspawn and prepare tmp
 execute as @a[tag=disable_dimensions_end_tp] \
     unless data storage disable_dimensions:tmp {tp:{bed_ok:true}} \
-    run function disable_dimensions:teleport/apply_world_spawn {path:"disable_dimensions:end/perform_tp"}
+    run function disable_dimensions:teleport/apply_world_spawn
 
-execute if data storage disable_dimensions:tmp {tp:{bed_ok:true}} \
-    run function disable_dimensions:end/perform_tp
+function disable_dimensions:end/perform_tp
 
 # Reset advancements
 advancement revoke @a[tag=disable_dimensions_end_tp] only disable_dimensions:end_entered

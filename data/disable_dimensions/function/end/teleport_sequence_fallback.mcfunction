@@ -1,3 +1,3 @@
 # Handles teleport + messaging when no valid bed exists
 function disable_dimensions:teleport/apply
-function disable_dimensions:end/arrival
+execute run function disable_dimensions:fx/arrival with storage disable_dimensions:config end_message

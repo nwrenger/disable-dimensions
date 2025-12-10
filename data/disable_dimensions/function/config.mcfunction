@@ -6,10 +6,13 @@ tellraw @s [ \
     " - Config\n" \
 ]
 
+tellraw @s [ \
+    {color:"#d414e5",text:"The Nether"}, \
+]
+
 execute if data storage disable_dimensions:config {nether:true} \
     run tellraw @s [ \
-        {color:"gray",text:"> "}, \
-        {color:"#d414e5",text:"The Nether: "}, \
+        {color:"gray",text:"> Status: "}, \
         { \
             color:"green", \
             text:"☑", \
@@ -28,7 +31,7 @@ execute if data storage disable_dimensions:config {nether:true} \
         { \
             color:"gold", \
             bold:true, \
-            text:"[Change]", \
+            text:"[Toggle]", \
             click_event:{ \
                 action:"run_command", \
                 command:"function disable_dimensions:config/nether/disable" \
@@ -41,8 +44,7 @@ execute if data storage disable_dimensions:config {nether:true} \
     ]
 execute if data storage disable_dimensions:config {nether:false} \
     run tellraw @s [ \
-        {color:"gray",text:"> "}, \
-        {color:"#d414e5",text:"The Nether: "}, \
+        {color:"gray",text:"> Status: "}, \
         { \
             color:"red", \
             text:"☒", \
@@ -61,7 +63,7 @@ execute if data storage disable_dimensions:config {nether:false} \
         { \
             color:"gold", \
             bold:true, \
-            text:"[Change]", \
+            text:"[Toggle]", \
             click_event:{ \
                 action:"run_command", \
                 command:"function disable_dimensions:config/nether/enable" \
@@ -73,10 +75,37 @@ execute if data storage disable_dimensions:config {nether:false} \
         } \
     ]
 
+tellraw @s [ \
+    {color:"gray",text:"> Message: "}, \
+    { \
+        interpret:true, \
+        nbt:"nether_message.component", \
+        storage:"disable_dimensions:config" \
+    }, \
+    " ", \
+    { \
+        color:"gold", \
+        bold:true, \
+        text:"[Edit]", \
+        click_event:{ \
+            action:"suggest_command", \
+            command:"/function disable_dimensions:config/nether/message {color:\"dark_red\", text:\"A sinister presence denies your passage...\"}" \
+        }, \
+        hover_event:{ \
+            action:"show_text", \
+            value:[{color:"gold",text:"Click to edit"}] \
+        } \
+    } \
+]
+
+tellraw @s [ \
+    "\n", \
+    {color:"#0beaaf",text:"The End"} \
+]
+
 execute if data storage disable_dimensions:config {end:true} \
     run tellraw @s [ \
-        {color:"gray",text:"> "}, \
-        {color:"#0beaaf",text:"The End: "}, \
+        {color:"gray",text:"> Status: "}, \
         { \
             color:"green", \
             text:"☑", \
@@ -95,7 +124,7 @@ execute if data storage disable_dimensions:config {end:true} \
         { \
             color:"gold", \
             bold:true, \
-            text:"[Change]", \
+            text:"[Toggle]", \
             click_event:{ \
                 action:"run_command", \
                 command:"function disable_dimensions:config/end/disable" \
@@ -108,8 +137,7 @@ execute if data storage disable_dimensions:config {end:true} \
     ]
 execute if data storage disable_dimensions:config {end:false} \
     run tellraw @s [ \
-        {color:"gray",text:"> "}, \
-        {color:"#0beaaf",text:"The End: "}, \
+        {color:"gray",text:"> Status: "}, \
         { \
             color:"red", \
             text:"☒", \
@@ -128,7 +156,7 @@ execute if data storage disable_dimensions:config {end:false} \
         { \
             color:"gold", \
             bold:true, \
-            text:"[Change]", \
+            text:"[Toggle]", \
             click_event:{ \
                 action:"run_command", \
                 command:"function disable_dimensions:config/end/enable" \
@@ -141,7 +169,30 @@ execute if data storage disable_dimensions:config {end:false} \
     ]
 
 tellraw @s [ \
-    {color:"gray",text:"> "}, \
+    {color:"gray",text:"> Message: "}, \
+    { \
+        interpret:true, \
+        nbt:"end_message.component", \
+        storage:"disable_dimensions:config" \
+    }, \
+    " ", \
+    { \
+        color:"gold", \
+        bold:true, \
+        text:"[Edit]", \
+        click_event:{ \
+            action:"suggest_command", \
+            command:"/function disable_dimensions:config/end/message {color:\"light_purple\", text:\"The End rejects your presence...\"}" \
+        }, \
+        hover_event:{ \
+            action:"show_text", \
+            value:[{color:"gold",text:"Click to edit"}] \
+        } \
+    } \
+]
+
+tellraw @s [ \
+    "\n", \
     {color:"yellow",text:"World Spawn: "}, \
     {color:"aqua",nbt:"world_spawn.x",storage:"disable_dimensions:config"}, \
     " ", \
@@ -152,7 +203,7 @@ tellraw @s [ \
     { \
         color:"gold", \
         bold:true, \
-        text:"[Change]", \
+        text:"[Replace]", \
         click_event:{ \
             action:"run_command",command:"function disable_dimensions:config/world_spawn/set" \
         }, \

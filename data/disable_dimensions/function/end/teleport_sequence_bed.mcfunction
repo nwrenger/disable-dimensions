@@ -1,3 +1,3 @@
 # Handles teleport + messaging for valid bed respawns
 function disable_dimensions:teleport/apply_area
-function disable_dimensions:end/arrival
+execute run function disable_dimensions:fx/arrival with storage disable_dimensions:config end_message

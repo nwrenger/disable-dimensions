@@ -38,7 +38,7 @@ After adding the data pack/mod to your world or server, you should see this conf
 
 ![loaded](showcase/screenshots/loaded.png)
 
-You can configure it using the config panel. It’s intractable with your mouse. You **must** set the **World Spawn** once through it. Make sure you’re standing at the desired spawn location when doing so:
+You can configure everything through the config panel, which is fully controllable with the mouse. You **may** toggle the status for each dimension and edit the **messages** shown to players on return; just be sure to use valid minecraft text component colors. You **must** also set the **World Spawn** at least once from this panel. Make sure you’re standing at the desired spawn location when doing so:
 
 ```mcfunction
 /function disable_dimensions:config

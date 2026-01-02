@@ -1,3 +1,3 @@
-# Runs all arrival logic at the resolved destination
+# Handles teleport + messaging
 function disable_dimensions:teleport/apply
 execute run function disable_dimensions:fx/arrival with storage disable_dimensions:config nether_message

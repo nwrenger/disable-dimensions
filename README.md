@@ -34,17 +34,40 @@ Allows you to disable dimensions by removing any possible way for players to ent
 
 ## Installation
 
-After adding the data pack/mod to your world or server, you should see this confirmation message on login when the world loads:
+After adding the data pack/mod to your world or server, you should be able to open the about panel, which is fully controllable with the mouse:
 
-![loaded](showcase/screenshots/loaded.png)
+```mcfunction
+/function disable_dimensions:about
+```
 
-You can configure everything through the config panel, which is fully controllable with the mouse. You **may** toggle the **status** for each dimension and edit the **messages** shown to players on return; just be sure to use valid minecraft text component colors. Furthermore, you **must** also set the **World Spawn** at least once from this panel. Make sure you’re standing at the desired spawn location when doing so:
+![about_panel](showcase/screenshots/about_panel.png)
+
+## Configuration
+
+You can configure everything through the config panel, which also fully controllable with the mouse. You **may** toggle the **status** for each dimension and edit the **messages** shown to players on return; just be sure to use valid minecraft text component colors. Furthermore, you **must** also set the **World Spawn** at least once from this panel. Make sure you’re standing at the desired spawn location when doing so:
 
 ```mcfunction
 /function disable_dimensions:config
 ```
 
 ![config_panel](showcase/screenshots/config_panel.png)
+
+### Server Only
+
+The config panel will only be usable when you're physically logged in to the server and have `op`.
+
+To configure the data pack/mod, you can use the config toggles which get called by the config panel directly inside the server terminal as follows:
+
+- The Nether:
+  - Enable: `function disable_dimensions:config/nether/enable`
+  - Disable: `function disable_dimensions:config/nether/disable`
+  - Edit Message: `function disable_dimensions:config/nether/message {color:"",text:""}`
+- The End:
+  - Enable: `function disable_dimensions:config/end/enable`
+  - Disable: `function disable_dimensions:config/end/disable`
+  - Edit Message: `function disable_dimensions:config/end/message {color:"",text:""}`
+- World Spawn:
+  - Set: _Not possible_ due to requiring physical presence at the desired location
 
 ## Showcase
 

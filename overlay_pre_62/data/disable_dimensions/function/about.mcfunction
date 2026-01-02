@@ -1,9 +1,4 @@
-# Setup storage defaults if they don't exist
-execute unless data storage disable_dimensions:config {init:true,world_spawn:{},nether_message:{},end_message:{}} \
-    run function disable_dimensions:config/defaults
-
-# Init Message
-tellraw @a [ \
+tellraw @s [ \
     "\n", \
     {"text":"Disable Dimensions","bold":true,"color":"gold"}, \
     " by ", \
@@ -13,7 +8,7 @@ tellraw @a [ \
         "color":"#F223F2", \
         "clickEvent":{"action":"open_url","value":"https://nwrenger.dev"} \
     }, \
-    " successfully loaded\n", \
+    "\n", \
     "\n", \
     {"text":"> Check my other projects on ","color":"gray"}, \
     { \

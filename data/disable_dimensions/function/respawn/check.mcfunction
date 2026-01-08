@@ -3,9 +3,9 @@
 # 0) Clear result
 data remove storage disable_dimensions:tmp tp.valid_respawn
 
-# 1a) Check for bed
+# 1a) Check for beds
 execute as @s \
-    if block ~ ~ ~ #minecraft:beds \
+    if predicate disable_dimensions:beds \
     run data modify storage disable_dimensions:tmp tp.valid_respawn set value true
 
 # 1b) Check for charged respawn anchor

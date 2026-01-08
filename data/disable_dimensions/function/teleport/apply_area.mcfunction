@@ -2,7 +2,7 @@
 tp @s @s
 
 # Checks safe spawn positions around the current block and teleports @s
-# to the first valid one with a fallback which teleports @s on top the bed.
+# to the first valid one with a fallback which teleports @s on top the block.
 
 # 1) ORTHOGONALS
 # -X
@@ -72,7 +72,7 @@ execute as @s \
     run return \
     run tp @s ~1 ~ ~1 facing ~ ~ ~
 
-# 3) TOP on bed (fallback)
+# 3) TOP on block (fallback)
 # We can always fallback without checks, because before apply_area gets called,
 # valid positions get checked via disable_dimensions:respawn/check_bed
 execute as @s \

@@ -6,15 +6,15 @@
 data remove storage disable_dimensions:tmp forceload
 
 $execute as @s \
-    in minecraft:overworld \
+    in $(dimension) \
     positioned $(x) $(y) $(z) \
     store success storage disable_dimensions:tmp forceload byte 1 \
     run forceload add ~ ~
 $execute as @s \
-    in minecraft:overworld \
+    in $(dimension) \
     positioned $(x) $(y) $(z) \
     run function $(path)
-$execute as @s in minecraft:overworld \
+$execute as @s in $(dimension) \
     positioned $(x) $(y) $(z) \
     if data storage disable_dimensions:tmp {forceload:1b} \
     run forceload remove ~ ~

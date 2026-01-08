@@ -74,7 +74,7 @@ execute as @s \
 
 # 3) TOP on block (fallback)
 # We can always fallback without checks, because before apply_area gets called,
-# valid positions get checked via disable_dimensions:respawn/check_bed
+# valid positions get checked via disable_dimensions:respawn/check
 execute as @s \
     run return \
     run tp @s ~ ~1 ~ facing ~ ~ ~

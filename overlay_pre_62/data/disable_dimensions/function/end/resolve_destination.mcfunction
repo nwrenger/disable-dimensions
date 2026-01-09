@@ -6,6 +6,9 @@ data modify storage disable_dimensions:tmp tp.x set from entity @s SpawnX
 data modify storage disable_dimensions:tmp tp.y set from entity @s SpawnY
 data modify storage disable_dimensions:tmp tp.z set from entity @s SpawnZ
 
+# Make sure the default is set
+data modify storage disable_dimensions:tmp tp.dimension set value "minecraft:overworld"
+
 # Copy respawn data
 data modify storage disable_dimensions:tmp tp.dimension set from entity @s SpawnDimension
 data modify storage disable_dimensions:tmp tp.forced_respawn set from entity @s SpawnForced

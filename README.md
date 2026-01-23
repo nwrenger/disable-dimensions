@@ -17,7 +17,7 @@ Allows you to disable dimensions by removing any possible way for players to ent
    All older ones are outdated or broken.
 2. **Comprehensive Coverage**:
    Works in every situation. For players in all game modes, teleportation commands, ender pearls, minecarts, and more.
-   Players can enter portals/teleport, but are instantly teleported back. From the Nether to their entry point with a fallback to world spawn, and from the End to their respawn point or world spawn.
+   Players can enter portals/teleport, but are instantly teleported back. From the Nether to their entry point with a fallback to world spawn, and from the End to their respawn point or world spawn. See [Edge Cases](#edge-cases) for the handful of scenarios that require manual cleanup.
 3. **Intended Vanilla Reward**:
    Players who try to swap dimensions will still receive the vanilla “entered dimension” advancement (for the Nether or the End).
    This is intentional and serves as a small reward for their attempt. And you know who tried by checking their achievements. Don’t worry, they’ll get teleported back safely!
@@ -68,6 +68,15 @@ To configure the data pack/mod, you can use the config toggles which get called 
   - Edit Message: `function disable_dimensions:config/end/message {color:"",text:""}`
 - World Spawn:
   - Set: _Not possible_ due to requiring physical presence at the desired location
+
+## Edge Cases
+
+This data pack/mod is intentionally event-driven, with a few rare transitions requiring manual cleanup:
+
+- **Respawn in disabled dimension**:
+  If a respawn point via a respawn anchor or the `spawnpoint` command is set inside a dimension that later gets disabled, the player will continue to respawn there until the respawn point is cleared or reset.
+- **Already inside on disable**:
+  Players who are already in The Nether or The End when it gets disabled will remain there until they change dimensions. Teleport them out if needed.
 
 ## Showcase
 

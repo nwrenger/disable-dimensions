@@ -73,10 +73,10 @@ To configure the data pack/mod, you can use the config toggles which get called 
 
 This data pack/mod is intentionally event-driven, with a few rare transitions requiring manual cleanup:
 
-- **Respawn in disabled dimension**:
-  If a respawn point via a respawn anchor or the `spawnpoint` command is set inside a dimension that later gets disabled, the player will continue to respawn there until the respawn point is cleared or reset.
-- **Already inside on disable**:
-  Players who are already in The Nether or The End when it gets disabled will remain there until they change dimensions. Teleport them out if needed.
+1. **Respawn in disabled dimension**:
+   If a respawn point via a respawn anchor or the `spawnpoint` command is set inside a dimension that later gets disabled, the player will continue to respawn there until the respawn point is cleared or reset.
+2. **Already inside on disable**:
+   Players who are already in The Nether or The End when it gets disabled will remain there until they change dimensions. Teleport them out if needed.
 
 ## Showcase
 

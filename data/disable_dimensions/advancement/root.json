@@ -4,7 +4,7 @@
       "id": "minecraft:command_block"
     },
     "title": "Disable Dimensions",
-    "description": "Disable vanilla and custom Dimensions like The Nether and/or The End",
+    "description": "Disable Dimensions like The Nether, The End and any further custom dimensions",
     "background": "minecraft:block/cherry_log",
     "frame": "task",
     "show_toast": false,

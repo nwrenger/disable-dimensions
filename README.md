@@ -61,7 +61,7 @@ From here, you can:
 - Reset dimension entries to defaults
 - Set the World Spawn
 
-> You **must** set the World Spawn at least once. Stand at the desired location before pressing Replace.
+> You **must** set the World Spawn at least once. Stand at the desired location before pressing `Replace`.
 
 ### Custom Dimensions
 
@@ -70,8 +70,8 @@ To block a custom dimension, add a new entry via the config panel.
 Each entry requires:
 
 - `name`: The display name of the entry. Used for display in the config panel and shouldn't be empty.
-- `id`: The ingame dimension identifier, needs to match the one of the custom dimension.
-- `type`: Can be either `nether_entered_pos` for nether portals or for The End and every other custom dimension `respawn`, which will teleport the player back to their respawn point or the World Spawn.
+- `id`: The in-game dimension identifier, needs to match the one of the custom dimension.
+- `type`: Can be either `nether_entered_pos` for Nether portals or for The End and every other custom dimension `respawn`, which will teleport the player back to their respawn point or the World Spawn.
 - `message_color`: The color of the message shown to the player on return, use valid text component colors.
 - `message_text`: The text of the message shown to the player on return.
 

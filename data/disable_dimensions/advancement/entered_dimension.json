@@ -1,0 +1,11 @@
+{
+  "parent": "disable_dimensions:root",
+  "criteria": {
+    "entered": {
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "rewards": {
+    "function": "disable_dimensions:main"
+  }
+}

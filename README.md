@@ -4,7 +4,7 @@
 [![modrinth](https://img.shields.io/badge/dynamic/json?url=https://api.modrinth.com/v2/project/disable-dimensions&label=downloads&query=$.downloads&color=#00AF5C)](https://modrinth.com/datapack/disable-dimensions)
 [![modrinth](https://img.shields.io/modrinth/game-versions/disable-dimensions.svg)](https://modrinth.com/datapack/disable-dimensions)
 
-A **hard-to-break, grief-resistant solution** for preventing players from entering **The Nether** and/or **The End**.
+A **hard-to-break, grief-resistant solution** for preventing players from entering **The Nether**, **The End**, and any further **custom dimensions**.
 
 Allows you to disable dimensions by removing any possible way for players to enter them. Each dimension can be separately `enabled` or `disabled`.
 
@@ -13,7 +13,7 @@ Allows you to disable dimensions by removing any possible way for players to ent
 ## Why use this data pack/mod?
 
 1. **Only Complete Solution**:
-   No other data pack currently disables both the Nether and the End for the current Minecraft versions.
+   No other data pack currently disables both the Nether, the End and further custom dimensions for the current Minecraft versions.
    All older ones are outdated or broken.
 2. **Comprehensive Coverage**:
    Works in every situation. For players in all game modes, teleportation commands, ender pearls, minecarts, and more.
@@ -24,7 +24,7 @@ Allows you to disable dimensions by removing any possible way for players to ent
 4. **Immersive Feedback**:
    On teleport back, players see a short action bar message, hear a subtle sound cue and get a slowness effect applied, making the experience clear and responsive without being intrusive.
 5. **Flexible and Compatible**:
-   Works as either a global mod or a world-specific data pack, fully compatible with both vanilla and modded setups right out of the box.
+   Works as either a global mod or a world-specific data pack, fully compatible with both vanilla, modded and custom dimensions setups right out of the box.
 6. **Server-Ready**:
    Built to be reliable, grief-resistant, and completely passive, with no extra overhead through tick-based checks. Perfect for public or semi-public multiplayer servers.
 7. **Dynamic Configuration**:
@@ -44,7 +44,7 @@ After adding the data pack/mod to your world or server, you should be able to op
 
 ## Configuration
 
-You can configure everything through the config panel, which also fully controllable with the mouse. You **may** toggle the **status** for each dimension and edit the **messages** shown to players on return; just be sure to use valid minecraft text component colors. Furthermore, you **must** also set the **World Spawn** at least once from this panel. Make sure you’re standing at the desired spawn location when doing so:
+Open the configuration panel by the following command:
 
 ```mcfunction
 /function disable_dimensions:config
@@ -52,22 +52,61 @@ You can configure everything through the config panel, which also fully controll
 
 ![config_panel](showcase/screenshots/config_panel.png)
 
+From here, you can:
+
+- Toggle each dimension `enabled` / `disabled`
+- Edit the return message and color
+- Add custom dimension entries, see [Custom Dimensions](#custom-dimensions) for a guide
+- Remove dimension entries
+- Reset dimension entries to defaults
+- Set the World Spawn
+
+> You **must** set the World Spawn at least once. Stand at the desired location before pressing Replace.
+
+### Custom Dimensions
+
+To block a custom dimension, add a new entry via the config panel.
+
+Each entry requires:
+
+- `name`: The display name of the entry. Used for display in the config panel and shouldn't be empty.
+- `id`: The ingame dimension identifier, needs to match the one of the custom dimension.
+- `type`: Can be either `nether_entered_pos` for nether portals or for The End and every other custom dimension `respawn`, which will teleport the player back to their respawn point or the World Spawn.
+- `message_color`: The color of the message shown to the player on return, use valid text component colors.
+- `message_text`: The text of the message shown to the player on return.
+
+Here are two examples of adding a custom dimension:
+
+1. **The Aether**
+
+```mcfunction
+/function disable_dimensions:config/dimension/add {name: "The Aether", id: "aether:the_aether", type: "respawn", message_color: "aqua", message_text:"A radiant force from the heavens bars your ascent..."}
+```
+
+2. **ATM10 - The Other**
+
+```mcfunction
+/function disable_dimensions:config/dimension/add {name: "The Other", id: "allthemodium:the_other", type: "respawn", message_color: "dark_purple", message_text:"A mysterious force from The Other prevents your entry..."}
+```
+
 ### Server Only
 
 The config panel will only be usable when you're physically logged in to the server and have `op`.
 
 To configure the data pack/mod, you can use the config toggles which get called by the config panel directly inside the server terminal as follows:
 
-- The Nether:
-  - Enable: `function disable_dimensions:config/nether/enable`
-  - Disable: `function disable_dimensions:config/nether/disable`
-  - Edit Message: `function disable_dimensions:config/nether/message {color:"",text:""}`
-- The End:
-  - Enable: `function disable_dimensions:config/end/enable`
-  - Disable: `function disable_dimensions:config/end/disable`
-  - Edit Message: `function disable_dimensions:config/end/message {color:"",text:""}`
+- Dimensions
+  - Add Entry: `function disable_dimensions:config/dimension/add {name: "", id: "", type: "", message_color: "", message_text:""}`
+  - Enable: `function disable_dimensions:config/dimension/enable {id: ""}`
+  - Disable: `function disable_dimensions:config/dimension/disable {id: ""}`
+  - Edit Message: `function disable_dimensions:config/dimension/message {id: "", message_color: "", message_text:""}`
+  - Remove Entry: `function disable_dimensions:config/dimension/remove {id: ""}`
+  - Reset Entries: `function disable_dimensions:config/dimension/reset`
 - World Spawn:
   - Set: _Not possible_ due to requiring physical presence at the desired location
+
+> Please Note: `id` will be the dimension identifier from the game.
+> For The Nether it's `{id: "minecraft:the_nether"}` and for The End it's `{id: "minecraft:the_end"}`.
 
 ## Edge Cases
 

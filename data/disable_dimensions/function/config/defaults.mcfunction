@@ -1,7 +1,4 @@
-# Default config: Nether OFF, End OFF
+# Default config: Nether and End, both disabled with custom messages, and world spawn at 0,80,0
 data modify storage disable_dimensions:config init set value true
 data modify storage disable_dimensions:config world_spawn set value {x:0.5d,y:80d,z:0.5d}
-data modify storage disable_dimensions:config nether set value false
-data modify storage disable_dimensions:config nether_message set value {component:{color:"dark_red", text:"A sinister presence denies your passage..."}}
-data modify storage disable_dimensions:config end set value false
-data modify storage disable_dimensions:config end_message set value {component:{color:"light_purple", text:"The End rejects your presence..."}}
+function disable_dimensions:dimensions/reset

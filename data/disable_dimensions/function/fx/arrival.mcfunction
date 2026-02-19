@@ -1,5 +1,5 @@
 # Message
-$title @s actionbar $(component)
+$title @s actionbar {color:"$(message_color)", text:"$(message_text)"}
 
 # Sound
 playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.5

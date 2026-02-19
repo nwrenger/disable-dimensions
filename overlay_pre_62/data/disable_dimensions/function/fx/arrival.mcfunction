@@ -1,1 +1,8 @@
-$function disable_dimensions:fx/apply_arrival $(component)
+# Message
+$title @s actionbar {"color": "$(message_color)", "text": "$(message_text)"}
+
+# Sound
+playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.5
+
+# Effect
+effect give @s minecraft:slowness 1 5 true

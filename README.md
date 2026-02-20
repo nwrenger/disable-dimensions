@@ -13,7 +13,7 @@ Allows you to disable dimensions by intercepting all known dimension-entry metho
 ## Why use this data pack/mod?
 
 1. **Only Complete Solution**:
-   No other data pack currently disables both the Nether, the End and further custom dimensions for the current Minecraft versions.
+   No other data pack currently disables The Nether, The End, and further custom dimensions for the current Minecraft versions.
    All older ones are outdated or broken.
 2. **Comprehensive Coverage**:
    Works in every situation. For players in all game modes, teleportation commands, ender pearls, minecarts, and more.

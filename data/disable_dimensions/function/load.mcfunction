@@ -1,3 +1,12 @@
-# Setup storage defaults if they don't exist
-execute unless data storage disable_dimensions:config {init:true,world_spawn:{},dimensions:[{}]} \
-    run function disable_dimensions:config/defaults
+# Setup storage defaults
+
+# If config is valid, stop here
+execute \
+    if data storage disable_dimensions:config world_spawn.x \
+    if data storage disable_dimensions:config world_spawn.y \
+    if data storage disable_dimensions:config world_spawn.z \
+    if data storage disable_dimensions:config dimensions \
+    run return fail
+
+# Otherwise initialize defaults
+function disable_dimensions:config/defaults

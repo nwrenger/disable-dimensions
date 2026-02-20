@@ -6,7 +6,7 @@
 
 A **hard-to-break, grief-resistant solution** for preventing players from entering **The Nether**, **The End**, and any further **custom dimensions**.
 
-Allows you to disable dimensions by removing any possible way for players to enter them. Each dimension can be separately `enabled` or `disabled`.
+Allows you to disable dimensions by intercepting all known dimension-entry methods and returning players immediately. Each dimension can be separately `enabled` or `disabled`.
 
 > Perfect for vanilla and modded multiplayer servers where you want to disable further dimensions to prevent players from progressing too fast.
 
@@ -17,7 +17,7 @@ Allows you to disable dimensions by removing any possible way for players to ent
    All older ones are outdated or broken.
 2. **Comprehensive Coverage**:
    Works in every situation. For players in all game modes, teleportation commands, ender pearls, minecarts, and more.
-   Players can enter portals/teleport, but are instantly teleported back. From the Nether to their entry point with a fallback to world spawn, and from the End to their respawn point or world spawn. See [Edge Cases](#edge-cases) for the handful of scenarios that require manual cleanup.
+   Players can enter portals or teleport, but are instantly teleported back. From the Nether to their entry point with a fallback to world spawn, and from the End to their respawn point or world spawn. See [Edge Cases](#edge-cases) for the handful of scenarios that require manual cleanup.
 3. **Intended Vanilla Reward**:
    Players who try to swap dimensions will still receive the vanilla “entered dimension” advancement (for the Nether or the End).
    This is intentional and serves as a small reward for their attempt. And you know who tried by checking their achievements. Don’t worry, they’ll get teleported back safely!
@@ -61,7 +61,7 @@ From here, you can:
 - Reset dimension entries to defaults
 - Set the World Spawn
 
-> You **must** set the World Spawn at least once. Stand at the desired location before pressing `Replace`.
+> A default World Spawn exists, but you **should** set it to your desired location once before production use by standing there and pressing `Replace`.
 
 ### Custom Dimensions
 
@@ -93,7 +93,7 @@ Here are two examples of adding a custom dimension:
 
 The config panel will only be usable when you're physically logged in to the server and have `op`.
 
-To configure the data pack/mod, you can use the config toggles which get called by the config panel directly inside the server terminal as follows:
+To configure the data pack/mod, you can use the config commands used by the config panel directly inside the server terminal as follows:
 
 - Dimensions
   - Add Entry: `function disable_dimensions:config/dimension/add {name: "", id: "", type: "", message_color: "", message_text:""}`
@@ -105,7 +105,7 @@ To configure the data pack/mod, you can use the config toggles which get called 
 - World Spawn:
   - Set: _Not possible_ due to requiring physical presence at the desired location
 
-> Please Note: `id` will be the dimension identifier from the game.
+> The `id` will be the dimension identifier from the game.
 > For The Nether it's `{id: "minecraft:the_nether"}` and for The End it's `{id: "minecraft:the_end"}`.
 
 ## Edge Cases

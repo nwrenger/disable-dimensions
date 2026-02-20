@@ -17,8 +17,5 @@ execute unless data entity @s entered_nether_pos \
 
 function disable_dimensions:nether_entered_pos/perform_tp
 
-# Reset advancement
-advancement revoke @s only disable_dimensions:nether_entered
-
 # Cleanup
 data remove storage disable_dimensions:tmp tp

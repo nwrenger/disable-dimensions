@@ -71,7 +71,9 @@ Each entry requires:
 
 - `name`: The display name of the entry. Used for display in the config panel and shouldn't be empty.
 - `id`: The in-game dimension identifier, needs to match the one of the custom dimension.
-- `type`: Can be either `nether_entered_pos` for Nether portals or for The End and every other custom dimension `respawn`, which will teleport the player back to their respawn point or the World Spawn.
+- `type`: Determines how and where the player will be sent back.
+  - `nether_entered_pos`: Sends the player to their last Nether entry position. Only valid for The Nether.
+  - `respawn`: Sends the player to their respawn point, or to the World Spawn if none is set. Used for The End and other custom dimensions.
 - `message_color`: The color of the message shown to the player on return, use valid text component colors.
 - `message_text`: The text of the message shown to the player on return.
 

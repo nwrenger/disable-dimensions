@@ -117,7 +117,7 @@ This data pack/mod is intentionally event-driven, with a few rare transitions re
 1. **Respawn in disabled dimension**:
    If a respawn point via a respawn anchor or the `spawnpoint` command is set inside a dimension that later gets disabled, the player will continue to respawn there until the respawn point is cleared or reset.
 2. **Already inside on disable**:
-   Players who are already in The Nether or The End when it gets disabled will remain there until they change dimensions. Teleport them out if needed.
+   Players who are already in The Nether, The End, or a custom dimension when it gets disabled will remain there until they change dimensions. Teleport them out if needed.
 
 ## Showcase
 

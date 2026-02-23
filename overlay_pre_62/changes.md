@@ -6,4 +6,4 @@
 - Player data value renaming:
   - respawn -> SpawnX, SpawnY, SpawnZ, SpawnDimension, SpawnForced
   - entered_nether_pos -> enteredNetherPosition
-- advancement background prefixes and suffixes
+- Advancement background prefixes and suffixes

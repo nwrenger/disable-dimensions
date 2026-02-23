@@ -118,6 +118,8 @@ This data pack/mod is intentionally event-driven, with a few rare transitions re
    If a respawn point via a respawn anchor or the `spawnpoint` command is set inside a dimension that later gets disabled, the player will continue to respawn there until the respawn point is cleared or reset.
 2. **Already inside on disable**:
    Players who are already in The Nether, The End, or a custom dimension when it gets disabled will remain there until they change dimensions. Teleport them out if needed.
+3. **Custom dimension respawn limitations**:
+   Custom dimensions like The Aether can add new respawn mechanics, but these are rejected since they rely on custom dimensions or blocks, and supporting them would require a dedicated validation flow which is not feasible.
 
 ## Showcase
 

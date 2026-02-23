@@ -112,7 +112,7 @@ To configure the data pack/mod, you can use the config commands used by the conf
 
 ## Edge Cases
 
-This data pack/mod is intentionally event-driven, with a few rare transitions requiring manual cleanup:
+This data pack/mod is intentionally event-driven, with a few rare transitions requiring manual cleanup or resulting in different than expected behavior:
 
 1. **Respawn in disabled dimension**:
    If a respawn point via a respawn anchor or the `spawnpoint` command is set inside a dimension that later gets disabled, the player will continue to respawn there until the respawn point is cleared or reset.

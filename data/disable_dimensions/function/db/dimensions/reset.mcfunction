@@ -6,6 +6,7 @@ data modify storage disable_dimensions:config dimensions set value [ \
         disabled: true, \
         message_color:"dark_red", \
         message_text:"A sinister presence denies your passage...", \
+        conditions: [] \
    }, \
    { \
         name: "The End", \
@@ -14,5 +15,6 @@ data modify storage disable_dimensions:config dimensions set value [ \
         disabled: true, \
         message_color:"light_purple", \
         message_text:"The End rejects your presence...", \
+        conditions: [] \
   }, \
 ]

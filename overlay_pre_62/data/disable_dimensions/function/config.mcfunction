@@ -8,7 +8,7 @@ tellraw @s [ \
 ]
 
 # Dimension config
-function disable_dimensions:dimensions/config
+function disable_dimensions:db/dimensions/config
 
 # Footer actions
 tellraw @s [ \
@@ -21,7 +21,7 @@ tellraw @s [ \
   "  ", \
   { \
     "text":"[Reset]","bold":true,"color":"red", \
-    "clickEvent":{"action":"run_command","value":"function disable_dimensions:config/dimension/reset"}, \
+    "clickEvent":{"action":"run_command","value":"/function disable_dimensions:config/dimension/reset"}, \
     "hoverEvent":{"action":"show_text","value":[{"text":"Reset dimension entries to defaults","color":"red"}]} \
   }, \
   "\n" \

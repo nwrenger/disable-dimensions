@@ -1,3 +1,3 @@
 # Handles teleport + messaging
 function disable_dimensions:teleport/apply
-execute run function disable_dimensions:fx/arrival with storage disable_dimensions:tmp cur
+execute run function disable_dimensions:fx/arrival with storage disable_dimensions:tmp d_cur

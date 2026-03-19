@@ -1,9 +1,8 @@
 # Dimension entry display
 $tellraw @s [ \
-  {text:"• ", color:"dark_gray"}, \
+  {text:"▸ ", color:"dark_gray"}, \
   {color:"#d414e5", text:"$(name)"}, \
-  {text:" ", color:"white"}, \
-  {color:"dark_gray", text:"($(id))"}, \
+  {color:"dark_gray", text:" ($(id))"}, \
   {text:"  ", color:"white"}, \
   { \
     color:"red", bold:true, text:"[Remove]", \
@@ -13,7 +12,7 @@ $tellraw @s [ \
 ]
 
 # Status and toggle button
-$execute if data storage disable_dimensions:tmp {cur:{disabled:false}} \
+$execute if data storage disable_dimensions:tmp {d_cur:{disabled:false}} \
     run tellraw @s [ \
         "  ", \
         {color:"gray",text:"Status:"}, \
@@ -40,14 +39,14 @@ $execute if data storage disable_dimensions:tmp {cur:{disabled:false}} \
             click_event:{ \
                 action:"run_command", \
                 command:"/function disable_dimensions:config/dimension/disable {id:\"$(id)\"}" \
-            },\
+            }, \
             hover_event:{ \
                 action:"show_text", \
                 value:[{color:"gold",text:"Click to toggle"}] \
             } \
         } \
     ]
-$execute if data storage disable_dimensions:tmp {cur:{disabled:true}} \
+$execute if data storage disable_dimensions:tmp {d_cur:{disabled:true}} \
     run tellraw @s [ \
         "  ", \
         {color:"gray",text:"Status:"}, \
@@ -83,8 +82,7 @@ $execute if data storage disable_dimensions:tmp {cur:{disabled:true}} \
     ]
 
 $tellraw @s [ \
-  {text:"  ", color:"white"}, \
-  {color:"gray", text:"Message: "}, \
+  {text:"  Message: ", color:"gray"}, \
   {color:"dark_gray", text:"\""}, \
   {color:"$(message_color)", text:"$(message_text)"}, \
   {color:"dark_gray", text:"\""}, \
@@ -96,4 +94,27 @@ $tellraw @s [ \
   } \
 ]
 
+# Conditions list header + inline action
+$tellraw @s [ \
+    {text:"  Conditions:", color:"gray"}, \
+    {text:"  ", color:"white"}, \
+    { \
+        color:"green", \
+        bold:true, \
+        text:"[Add]", \
+        click_event:{ \
+            action:"suggest_command", \
+            command:"/function disable_dimensions:config/dimension/condition/add {id:\"$(id)\",name:\"\",type:\"\",value:\"\", disabled:\"false\"}" \
+        }, \
+        hover_event:{ \
+            action:"show_text", \
+            value:[{color:"green",text:"Add a new condition entry"}] \
+        } \
+    } \
+]
+
+# Conditions entries
+$function disable_dimensions:db/dimensions/conditions/config {id:"$(id)"}
+
+# Spacing
 tellraw @s ""

@@ -8,7 +8,7 @@ tellraw @s [ \
 ]
 
 # Dimension config
-function disable_dimensions:dimensions/config
+function disable_dimensions:db/dimensions/config
 
 # Footer actions
 tellraw @s [ \

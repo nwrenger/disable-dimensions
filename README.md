@@ -4,17 +4,17 @@
 [![modrinth](https://img.shields.io/badge/dynamic/json?url=https://api.modrinth.com/v2/project/disable-dimensions&label=downloads&query=$.downloads&color=#00AF5C)](https://modrinth.com/datapack/disable-dimensions)
 [![modrinth](https://img.shields.io/modrinth/game-versions/disable-dimensions.svg)](https://modrinth.com/datapack/disable-dimensions)
 
-A **hard-to-break, grief-resistant solution** for preventing players from entering **The Nether**, **The End**, and any further **custom dimensions**.
+A **hard-to-break, grief-resistant solution** for preventing players from entering **The Nether**, **The End**, and any further **custom dimensions**, with optional per-dimension conditions.
 
-Allows you to disable dimensions by intercepting all known dimension-entry methods and returning players immediately. Each dimension can be separately `enabled` or `disabled`.
+Allows you to disable dimensions by intercepting all known dimension-entry methods and returning players immediately. Each dimension can be separately `enabled` or `disabled`, with optional conditions which override that status.
 
 > Perfect for vanilla and modded multiplayer servers where you want to disable further dimensions to prevent players from progressing too fast.
 
 ## Why use this data pack/mod?
 
 1. **Only Complete Solution**:
-   No other data pack currently disables The Nether, The End, and further custom dimensions for the current Minecraft versions.
-   All older ones are outdated or broken.
+   No other data pack currently disables The Nether, The End, and further custom dimensions, with optional per-dimension conditions, for the current Minecraft versions.
+   All older ones are outdated, broken, or not as feature rich.
 2. **Comprehensive Coverage**:
    Works in every situation. For players in all game modes, teleportation commands, ender pearls, minecarts, and more.
    Players can enter portals or teleport, but are instantly teleported back. From the Nether to their entry point with a fallback to world spawn, and from the End to their respawn point or world spawn. See [Edge Cases](#edge-cases) for the handful of scenarios that require manual cleanup.
@@ -56,12 +56,52 @@ From here, you can:
 
 - Toggle each dimension `enabled` / `disabled`
 - Edit the return message and color
+- Add and remove conditions, see [Conditions](#conditions) for further information
 - Add custom dimension entries, see [Custom Dimensions](#custom-dimensions) for a guide
 - Remove dimension entries
 - Reset dimension entries to defaults
 - Set the World Spawn
 
 > A default World Spawn exists, but you **should** set it to your desired location once before production use by standing there and pressing `Replace`.
+
+### Conditions
+
+Conditions can overwrite the current set status if they're true. With them you can partially enable/disable dimension travel after a specific time, for a specific gamemode and so on.
+
+Each condition requires:
+
+- `name`: A unique name for the condition.
+- `type`: Determines what the value gets checked against.
+  - `gamemode`: Against the current gamemode. The value can be `survival`, `creative`, `adventure`, `spectator`.
+  - `gametime`: Against the time the game was run. This is given in ticks, so make sure to apply a formula like this for days `day_count * 24 * 60 * 60 * 20`. This time only advances while the world is running, so server downtime will affect accuracy.
+  - `item`: Against the items inside the player's inventory. It can be checked after the item id with an optional filter by item components, for example `minecraft:diamonds[count=64]`.
+  - `tag`: Against the tags of the player. You can give players custom tags, like `enter_all`, and set the value to that tag to enable/disable their entry.
+- `value`: The specific value which gets checked against. Is different based on the set type.
+- `disabled`: The disabled value which overwrites the current status if the condition applies.
+
+> If you have multiple conditions, only one of them needs to be true to overwrite the current status.
+
+> It's not adviced to have multiple conditions which can cancel each other out, like both applying for the current player but one enabling and the other one disabling travel. This will result in unexpected behavior.
+
+Here are three examples of conditions for `minecraft:the_nether`:
+
+1. **Enable after one day**
+
+```mcfunction
+/function disable_dimensions:config/dimension/condition/add {id:"minecraft:the_nether",name:"1d Enable",type:"gametime",value:"1728000", disabled:"false"}
+```
+
+2. **Enable for creative mode**
+
+```mcfunction
+/function disable_dimensions:config/dimension/condition/add {id:"minecraft:the_nether",name:"Allow Creative",type:"gamemode",value:"creative", disabled:"false"}
+```
+
+3. **Disable after 7 days**
+
+```mcfunction
+/function disable_dimensions:config/dimension/condition/add {id:"minecraft:the_nether",name:"7d Disable",type:"gametime",value:"12096000", disabled:"true"}
+```
 
 ### Custom Dimensions
 
@@ -104,6 +144,12 @@ To configure the data pack/mod, you can use the config commands used by the conf
   - Edit Message: `function disable_dimensions:config/dimension/message {id: "", message_color: "", message_text:""}`
   - Remove Entry: `function disable_dimensions:config/dimension/remove {id: ""}`
   - Reset Entries: `function disable_dimensions:config/dimension/reset`
+- Conditions
+  - Add: `function disable_dimensions:config/dimension/condition/add {id:"",name:"",type:"",value:"", disabled:"false"}`
+  - Enable: `function disable_dimensions:config/dimension/condition/enable {id:"", name:""}`
+  - Disable: `function disable_dimensions:config/dimension/condition/disable {id:"", name:""}`
+  - Edit: `function disable_dimensions:config/dimension/condition/edit {id:"", name:"", type:"", value:""}"`
+  - Remove: `function disable_dimensions:config/dimension/condition/remove {id:"", name:""}`
 - World Spawn:
   - Set: _Not possible_ due to requiring physical presence at the desired location
 

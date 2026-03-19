@@ -81,7 +81,7 @@ Each condition requires:
 
 > If you have multiple conditions, only one of them needs to be true to overwrite the current status.
 
-> It's not adviced to have multiple conditions which can cancel each other out, like both applying for the current player but one enabling and the other one disabling travel. This will result in unexpected behavior.
+> It's not adviced to have multiple conditions which can cancel each other out, like both applying for the current player but one enabling and the other one disabling travel. This will result in unexpectable behavior.
 
 Here are three examples of conditions for `minecraft:the_nether`:
 

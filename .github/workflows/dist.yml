@@ -20,14 +20,16 @@ jobs:
         run: |
           echo "NAME=disable-dimensions-${{ github.event.release.tag_name }}.zip" >> "$GITHUB_OUTPUT"
 
-      - name: Create zip (pack.mcmeta + pack.png + overlay_* + data/)
+      - name: Create zip (pack.mcmeta + pack.png + overlay_*/ + data/)
         shell: bash
         run: |
           set -euo pipefail
 
           test -f pack.mcmeta
           test -f pack.png
-          test -d overlay_*
+          for d in overlay_*/; do
+            test -d "$d" || { echo "Not a directory: $d"; exit 1; }
+          done
           test -d data
 
           zip -r "${{ steps.vars.outputs.NAME }}" pack.mcmeta pack.png overlay_* data

@@ -30,11 +30,11 @@ tellraw @s [ \
 # World spawn config
 tellraw @s [ \
     {color:"yellow",text:"World Spawn: "}, \
-    {color:"aqua",plain:true,nbt:"world_spawn.x",storage:"disable_dimensions:config"}, \
+    {color:"aqua",nbt:"world_spawn.x",storage:"disable_dimensions:config"}, \
     " ", \
-    {color:"aqua",plain:true,nbt:"world_spawn.y",storage:"disable_dimensions:config"}, \
+    {color:"aqua",nbt:"world_spawn.y",storage:"disable_dimensions:config"}, \
     " ", \
-    {color:"aqua",plain:true,nbt:"world_spawn.z",storage:"disable_dimensions:config"}, \
+    {color:"aqua",nbt:"world_spawn.z",storage:"disable_dimensions:config"}, \
     " ", \
     { \
         color:"gold", \

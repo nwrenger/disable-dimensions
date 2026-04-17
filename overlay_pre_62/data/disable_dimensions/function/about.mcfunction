@@ -44,7 +44,7 @@ tellraw @s [ \
         "text": "function disable_dimensions:config", \
         "italic": true, \
         "color": "aqua", \
-        "clickEvent": {"action": "run_command", "value": "function disable_dimensions:config"} \
+        "clickEvent": {"action": "run_command", "value": "/function disable_dimensions:config"} \
     }, \
     "\n" \
 ]

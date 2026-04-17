@@ -39,7 +39,7 @@ tellraw @s [ \
         "bold": true, \
         "text": "[", \
         "extra": [{"translate": "disable_dimensions.action.reset", "fallback": "Reset"}, "]"], \
-        "clickEvent": {"action": "run_command", "value": "function disable_dimensions:config/dimension/reset"}, \
+        "clickEvent": {"action": "run_command", "value": "/function disable_dimensions:config/dimension/reset"}, \
         "hoverEvent": {"action": "show_text", "value": [{"color": "red", "translate": "disable_dimensions.config.hover.reset_dimensions", "fallback": "Reset dimension entries to defaults"}]} \
     }, \
     "\n" \

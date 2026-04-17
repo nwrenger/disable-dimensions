@@ -1,0 +1,43 @@
+{
+  "disable_dimensions.description.resource_pack": "Übersetzungen für Disable Dimensions",
+  "disable_dimensions.description.data_pack": "Deaktiviere Dimensionen wie den Nether, das Ende und weitere benutzerdefinierte Dimensionen, mit optionalen Bedingungen",
+  "disable_dimensions.status.now": "jetzt",
+  "disable_dimensions.enabled": "aktiviert",
+  "disable_dimensions.disabled": "deaktiviert",
+  "disable_dimensions.title_by_author": "%1$s von %2$s",
+
+  "disable_dimensions.about.other_projects": "Sieh dir meine anderen Projekte an",
+  "disable_dimensions.about.issue_prefix": "Falls du ein Problem mit diesem Pack hast, melde es",
+  "disable_dimensions.about.issue_link": "hier",
+  "disable_dimensions.about.config": "Zum Konfigurieren dieses Packs verwende",
+
+  "disable_dimensions.action.add": "Hinzufügen",
+  "disable_dimensions.action.edit": "Bearbeiten",
+  "disable_dimensions.action.toggle": "Umschalten",
+  "disable_dimensions.action.toggle.hover": "Klicken zum Umschalten",
+  "disable_dimensions.action.reset": "Zurücksetzen",
+  "disable_dimensions.action.replace": "Ersetzen",
+  "disable_dimensions.action.remove": "Entfernen",
+
+  "disable_dimensions.config.title": "Konfiguration",
+  "disable_dimensions.config.hover.add_dimension": "Einen neuen Dimensionseintrag hinzufügen",
+  "disable_dimensions.config.hover.reset_dimensions": "Dimensionseinträge auf Standardwerte zurücksetzen",
+  "disable_dimensions.config.world_spawn.label": "Welt Spawn",
+  "disable_dimensions.config.world_spawn.hover.replace": "Klicken, um mit deiner aktuellen Position zu ersetzen",
+  "disable_dimensions.config.world_spawn.not_overworld": "Gehe in die Oberwelt zu deinem gewünschten Spawnpunkt und klicke dann erneut",
+
+  "disable_dimensions.config.dimension.hover.remove": "Diesen Eintrag entfernen",
+  "disable_dimensions.config.dimension.status.label": "Status",
+  "disable_dimensions.config.dimension.status.pattern": "Betreten von %1$s ist %2$s %3$s",
+  "disable_dimensions.config.dimension.message.label": "Nachricht",
+  "disable_dimensions.config.dimension.message.hover.edit": "Nachrichtentext/-farbe bearbeiten",
+  "disable_dimensions.config.dimension.conditions.label": "Bedingungen",
+  "disable_dimensions.config.dimension.conditions.hover.add": "Einen neuen Bedingungseintrag hinzufügen",
+
+  "disable_dimensions.config.condition.hover.remove": "Diese Bedingung entfernen",
+  "disable_dimensions.config.condition.status.label": "Geänderter Status",
+  "disable_dimensions.config.condition.status.pattern": "Betreten %1$s wird %2$s",
+  "disable_dimensions.config.condition.status.following": "unter dieser Bedingung",
+  "disable_dimensions.config.condition.trigger.label": "Trigger",
+  "disable_dimensions.config.condition.hover.edit": "Trigger bearbeiten"
+}

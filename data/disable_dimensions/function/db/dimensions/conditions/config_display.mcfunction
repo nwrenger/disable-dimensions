@@ -1,96 +1,115 @@
 # Config entry display
 $tellraw @s [ \
-  {text:"    ↳ ", color:"dark_gray"}, \
-  {color:"dark_aqua", text:"$(name)"}, \
-  {text:"  ", color:"white"}, \
-  { \
-    color:"red", bold:true, text:"[Remove]", \
-    click_event:{action:"run_command", command:"/function disable_dimensions:config/dimension/condition/remove {id:\"$(id)\", name:\"$(name)\"}"}, \
-    hover_event:{action:"show_text", value:[{color:"red", text:"Remove this condition"}]} \
-  } \
+    "    ", \
+    {text: "↳ ", color: "dark_gray"}, \
+    {color:"dark_aqua", text:"$(name)"}, \
+    "  ", \
+    { \
+        color: "red", \
+        bold: true, \
+        text: "[", \
+        extra: [{translate: "disable_dimensions.action.remove", fallback: "Remove"}, "]"], \
+        click_event: {action: "run_command", command: "/function disable_dimensions:config/dimension/condition/remove {id:\"$(id)\", name:\"$(name)\"}"}, \
+        hover_event: {action: "show_text", value:[{color: "red", translate: "disable_dimensions.config.condition.hover.remove", fallback: "Remove this condition"}]} \
+    } \
 ]
 
 # Status and toggle button
 $execute if data storage disable_dimensions:tmp {c_cur:{disabled:false}} \
     run tellraw @s [ \
         "      ", \
-        {color:"gray",text:"Changed Status:"}, \
+        {color: "gray", translate: "disable_dimensions.config.condition.status.label", fallback: "Changed Status", extra: [":"]}, \
         " ", \
         { \
-            color:"green", \
-            text:"☑", \
-            hover_event:{ \
-                action:"show_text", \
-                value:[ \
-                    "Entering ", \
-                    {color:"gold",text:"following this condition "}, \
-                    "will be ", \
-                    {color:"green",text:"enabled"} \
+            color: "green", \
+            text: "☑", \
+            hover_event: { \
+                action: "show_text", \
+                value: [ \
+                    { \
+                        translate: "disable_dimensions.config.condition.status.pattern", \
+                        fallback: "Entering %1$s will be %2$s", \
+                        with: [ \
+                            {translate: "disable_dimensions.config.condition.status.following", fallback: "following this condition", color: "gold"}, \
+                            {translate: "disable_dimensions.enabled", fallback: "enabled", color: "green"} \
+                        ] \
+                    } \
                 ] \
             } \
         }, \
         "  ", \
         { \
-            color:"gold", \
-            bold:true, \
-            text:"[Toggle]", \
-            click_event:{ \
-                action:"run_command", \
-                command:"/function disable_dimensions:config/dimension/condition/disable {id:\"$(id)\", name:\"$(name)\"}" \
+            color: "gold", \
+            bold: true, \
+            text: "[", \
+            extra: [{translate: "disable_dimensions.action.toggle", fallback: "Toggle"}, "]"], \
+            click_event: { \
+                action: "run_command", \
+                command: "/function disable_dimensions:config/dimension/condition/disable {id:\"$(id)\", name:\"$(name)\"}" \
             },\
-            hover_event:{ \
-                action:"show_text", \
-                value:[{color:"gold",text:"Click to toggle"}] \
+            hover_event: { \
+                action: "show_text", \
+                value: [{color: "gold", translate: "disable_dimensions.action.toggle.hover", fallback: "Click to toggle"}] \
             } \
         } \
     ]
 $execute if data storage disable_dimensions:tmp {c_cur:{disabled:true}} \
     run tellraw @s [ \
         "      ", \
-        {color:"gray",text:"Changed Status:"}, \
+        {color: "gray", translate: "disable_dimensions.config.condition.status.label", fallback: "Changed Status", extra: [":"]}, \
         " ", \
         { \
             color:"red", \
             text:"☒", \
-            hover_event:{ \
-                action:"show_text", \
-                value:[ \
-                    "Entering ", \
-                    {color:"gold",text:"following this condition "}, \
-                    "will be ", \
-                    {color:"red",text:"disabled"} \
+            hover_event: { \
+                action: "show_text", \
+                value: [ \
+                    { \
+                        translate: "disable_dimensions.config.condition.status.pattern", \
+                        fallback: "Entering %1$s will be %2$s", \
+                        with: [ \
+                            {translate: "disable_dimensions.config.condition.status.following", fallback: "following this condition", color: "gold"}, \
+                            {translate: "disable_dimensions.disabled", fallback: "disabled", color: "red"} \
+                        ] \
+                    } \
                 ] \
             } \
         }, \
         "  ", \
         { \
-            color:"gold", \
-            bold:true, \
-            text:"[Toggle]", \
-            click_event:{ \
-                action:"run_command", \
-                command:"/function disable_dimensions:config/dimension/condition/enable {id:\"$(id)\", name:\"$(name)\"}" \
-            }, \
-            hover_event:{ \
-                action:"show_text", \
-                value:[{color:"gold",text:"Click to toggle"}] \
+            color: "gold", \
+            bold: true, \
+            text: "[", \
+            extra: [{translate: "disable_dimensions.action.toggle", fallback: "Toggle"}, "]"], \
+            click_event: { \
+                action: "run_command", \
+                command: "/function disable_dimensions:config/dimension/condition/enable {id:\"$(id)\", name:\"$(name)\"}" \
+            },\
+            hover_event: { \
+                action: "show_text", \
+                value: [{color: "gold", translate: "disable_dimensions.action.toggle.hover", fallback: "Click to toggle"}] \
             } \
         } \
     ]
 
 $tellraw @s [ \
-  {text:"      Trigger: ", color:"gray"}, \
-  {color:"dark_gray", text:"\""}, \
-  {color:"white", text:"$(value)"}, \
-  {color:"dark_gray", text:"\""}, \
-  {text:" ", color:"white"}, \
-  {color:"dark_gray", text:"("}, \
-  {color:"dark_green", text:"$(type)"}, \
-  {color:"dark_gray", text:")"}, \
-  {text:"  ", color:"white"}, \
-  { \
-    color:"gold", bold:true, text:"[Edit]", \
-    click_event:{action:"suggest_command", command:"/function disable_dimensions:config/dimension/condition/edit {id:\"$(id)\", name:\"$(name)\", type:\"$(type)\", value:\"$(value)\"}"}, \
-    hover_event:{action:"show_text", value:[{color:"gold",text:"Edit trigger"}]} \
-  } \
+    "      ", \
+    {translate: "disable_dimensions.config.condition.trigger.label", fallback:"Trigger", color:"gray", extra: [":"]}, \
+    " ", \
+    {color: "dark_gray", text: "\""}, \
+    "$(value)", \
+    {color: "dark_gray", text: "\""}, \
+    " ", \
+    {color: "dark_gray", text: "("}, \
+    {color: "dark_green", text: "$(type)"}, \
+    {color: "dark_gray", text: ")"}, \
+    "  ", \
+    { \
+        color: "gold", \
+        bold: true, \
+        text: "[", \
+        extra: [{translate: "disable_dimensions.action.edit", fallback: "Edit"}, "]"], \
+        click_event :{action: "suggest_command", command: "/function disable_dimensions:config/dimension/condition/edit {id:\"$(id)\", name:\"$(name)\", type:\"$(type)\", value:\"$(value)\"}"}, \
+        hover_event: {action: "show_text", value: [{color: "gold", translate: "disable_dimensions.config.condition.hover.edit", fallback: "Edit trigger"}]} \
+    } \
 ]

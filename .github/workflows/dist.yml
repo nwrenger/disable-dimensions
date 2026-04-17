@@ -1,4 +1,4 @@
-name: Package datapack on release
+name: Package datapack and mod on release
 
 on:
   release:
@@ -9,35 +9,130 @@ permissions:
   contents: write
 
 jobs:
-  build-and-attach-zip:
+  build-and-attach-artifacts:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Compute filename
+      - name: Compute names and version
         id: vars
+        shell: bash
         run: |
-          echo "NAME=disable-dimensions-${{ github.event.release.tag_name }}.zip" >> "$GITHUB_OUTPUT"
+          set -euo pipefail
 
-      - name: Create zip (pack.mcmeta + pack.png + overlay_*/ + data/)
+          VERSION="${{ github.event.release.tag_name || github.ref_name }}"
+
+          echo "VERSION=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "ZIP_NAME=disable-dimensions-${VERSION}.zip" >> "$GITHUB_OUTPUT"
+          echo "JAR_NAME=disable-dimensions-${VERSION}+mod.jar" >> "$GITHUB_OUTPUT"
+          echo "RESOURCEPACK_NAME=disable-dimensions-${VERSION}+resourcepack.zip" >> "$GITHUB_OUTPUT"
+
+      - name: Validate inputs
         shell: bash
         run: |
           set -euo pipefail
 
           test -f pack.mcmeta
           test -f pack.png
+          test -d data
+          test -d resourcepack
+          test -f resourcepack/pack.mcmeta
+          test -d resourcepack/assets
+
+          shopt -s nullglob
           for d in overlay_*/; do
             test -d "$d" || { echo "Not a directory: $d"; exit 1; }
           done
-          test -d data
 
-          zip -r "${{ steps.vars.outputs.NAME }}" pack.mcmeta pack.png overlay_* data
+          test -f META-INF/mods.toml
+          test -f META-INF/neoforge.mods.toml
+          test -f fabric.mod.json
+          test -f quilt.mod.json
 
-      - name: Attach zip to release
+      - name: Prepare resourcepack files
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          rm -rf .resourcepack-build
+          mkdir -p .resourcepack-build
+
+          cp resourcepack/pack.mcmeta .resourcepack-build/pack.mcmeta
+          cp pack.png .resourcepack-build/pack.png
+          cp -r resourcepack/assets .resourcepack-build/assets
+
+      - name: Create resourcepack zip
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          (
+            cd .resourcepack-build
+            zip -r "../${{ steps.vars.outputs.RESOURCEPACK_NAME }}" \
+              pack.mcmeta \
+              pack.png \
+              assets
+          )
+
+      - name: Create datapack zip
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          zip -r "${{ steps.vars.outputs.ZIP_NAME }}" \
+            pack.mcmeta \
+            pack.png \
+            overlay_* \
+            data
+
+      - name: Inject release version into mod metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          VERSION="${{ steps.vars.outputs.VERSION }}"
+
+          for f in META-INF/* fabric.mod.json quilt.mod.json; do
+            [ -f "$f" ] || continue
+            sed -i "s/__VERSION__/${VERSION}/g" "$f"
+          done
+
+      - name: Create mod jar
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          rm -rf .mod-build
+          mkdir -p .mod-build
+
+          cp pack.mcmeta .mod-build/pack.mcmeta
+          cp pack.png .mod-build/pack.png
+          cp -r data .mod-build/data
+
+          shopt -s nullglob
+          for d in overlay_*; do
+            cp -r "$d" .mod-build/
+          done
+
+          cp -r .resourcepack-build/assets .mod-build/assets
+          cp -r META-INF .mod-build/META-INF
+          cp fabric.mod.json .mod-build/fabric.mod.json
+          cp quilt.mod.json .mod-build/quilt.mod.json
+
+          (
+            cd .mod-build
+            zip -r "../${{ steps.vars.outputs.JAR_NAME }}" .
+          )
+
+      - name: Attach artifacts to release
         uses: softprops/action-gh-release@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          files: ${{ steps.vars.outputs.NAME }}
+          files: |
+            ${{ steps.vars.outputs.ZIP_NAME }}
+            ${{ steps.vars.outputs.JAR_NAME }}
+            ${{ steps.vars.outputs.RESOURCEPACK_NAME }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

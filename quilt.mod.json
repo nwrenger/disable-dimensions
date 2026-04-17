@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "io.github.nwrenger.disabledimensions",
+    "id": "disable_dimensions",
+    "version": "__VERSION__",
+    "metadata": {
+      "name": "Disable Dimensions",
+      "description": "Disable dimensions like The Nether, The End, and any further custom dimensions, with optional conditions.",
+      "contributors": { "nwrenger": "Member" },
+      "contact": {
+        "homepage": "https://modrinth.com/datapack/disable-dimensions",
+        "sources": "https://github.com/nwrenger/disable-dimensions",
+        "issues": "https://github.com/nwrenger/disable-dimensions/issues"
+      },
+      "icon": "pack.png"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "depends": [
+      {
+        "id": "quilt_resource_loader",
+        "versions": "*",
+        "unless": "fabric-resource-loader-v0"
+      }
+    ]
+  }
+}

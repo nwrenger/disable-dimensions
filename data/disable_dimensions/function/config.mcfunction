@@ -1,10 +1,22 @@
 # Header
 tellraw @s [ \
     "\n", \
-    {text:"Disable Dimensions",bold:true,color:"gold"}, \
-    " by ", \
-    {text:"nwrenger",italic:true,color:"#F223F2",click_event:{action:"open_url",url:"https://nwrenger.dev"}}, \
-    " - Config\n" \
+    { \
+        translate: "disable_dimensions.title_by_author", \
+        fallback: "%1$s by %2$s", \
+        with: [ \
+            {text: "Disable Dimensions", bold:true, color:"gold"}, \
+            { \
+                text: "nwrenger", \
+                italic: true, \
+                color: "#F223F2", \
+                click_event: {action: "open_url", url: "https://nwrenger.dev"} \
+            } \
+        ] \
+    }, \
+    " - ", \
+    {translate: "disable_dimensions.config.title", fallback:"Config"}, \
+    "\n" \
 ]
 
 # Dimension config
@@ -12,40 +24,26 @@ function disable_dimensions:db/dimensions/config
 
 # Footer actions
 tellraw @s [ \
-  "  ", \
-  { \
-  color:"green",bold:true,text:"[Add]", \
-    click_event:{action:"suggest_command",command:"/function disable_dimensions:config/dimension/add {name:\"\",id:\"\",type:\"\",message_color:\"\", message_text:\"\"}"}, \
-    hover_event:{action:"show_text",value:[{color:"green",text:"Add a new dimension entry"}]} \
-  }, \
-  {text:"  ",color:"white"}, \
-  { \
-  color:"red",bold:true,text:"[Reset]", \
-    click_event:{action:"run_command",command:"function disable_dimensions:config/dimension/reset"}, \
-    hover_event:{action:"show_text",value:[{color:"red",text:"Reset dimension entries to defaults"}]} \
-  }, \
-  "\n" \
-]
-
-# World spawn config
-tellraw @s [ \
-    {color:"yellow",text:"World Spawn: "}, \
-    {color:"aqua",plain:true,nbt:"world_spawn.x",storage:"disable_dimensions:config"}, \
-    " ", \
-    {color:"aqua",plain:true,nbt:"world_spawn.y",storage:"disable_dimensions:config"}, \
-    " ", \
-    {color:"aqua",plain:true,nbt:"world_spawn.z",storage:"disable_dimensions:config"}, \
-    " ", \
+    "  ", \
     { \
-        color:"gold", \
-        bold:true, \
-        text:"[Replace]", \
-        click_event:{ \
-            action:"run_command",command:"function disable_dimensions:config/world_spawn/set" \
-        }, \
-        hover_event:{ \
-            action:"show_text",value:[{color:"gold",text:"Click to replace with your current position"}] \
-        } \
+        color: "green", \
+        bold: true, \
+        text: "[", \
+        extra: [{translate: "disable_dimensions.action.add", fallback:"Add" }, "]"], \
+        click_event: {action: "suggest_command", command: "/function disable_dimensions:config/dimension/add {name:\"\",id:\"\",type:\"\",message_color:\"\", message_text:\"\"}"}, \
+        hover_event: {action: "show_text", value: [{color: "green", translate: "disable_dimensions.config.hover.add_dimension", fallback: "Add a new dimension entry"}]} \
+    }, \
+    "  ", \
+    { \
+        color: "red", \
+        bold: true, \
+        text: "[", \
+        extra: [{translate: "disable_dimensions.action.reset", fallback: "Reset"}, "]"], \
+        click_event: {action: "run_command", command: "function disable_dimensions:config/dimension/reset"}, \
+        hover_event: {action: "show_text", value: [{color:"red", translate: "disable_dimensions.config.hover.reset_dimensions", fallback: "Reset dimension entries to defaults"}]} \
     }, \
     "\n" \
 ]
+
+# World spawn config
+function disable_dimensions:config/world_spawn/display with storage disable_dimensions:config world_spawn

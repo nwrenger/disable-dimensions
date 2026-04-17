@@ -1,0 +1,12 @@
+{
+  "pack": {
+    "pack_format": 69,
+    "min_format": 34,
+    "max_format": [84, 0],
+    "supported_formats": { "min_inclusive": 34, "max_inclusive": 84 },
+    "description": {
+      "translate": "disable_dimensions.description.resource_pack",
+      "fallback": "Translations for Disable Dimensions"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+$tellraw @s [ \
+    {color: "yellow", translate: "disable_dimensions.config.world_spawn.label", fallback: "World Spawn", extra: [":"]}, \
+    "  ", \
+    { \
+        color: "gold", \
+        bold: true, \
+        text: "[", \
+        extra: [{translate:"disable_dimensions.action.replace", fallback:"Replace"}, "]"], \
+        click_event: { \
+            action: "run_command", command: "function disable_dimensions:config/world_spawn/set" \
+        }, \
+        hover_event: { \
+            action: "show_text", value: [{color: "gold", translate: "disable_dimensions.config.world_spawn.hover.replace", fallback: "Click to replace with your current position"}] \
+        } \
+    }, \
+    "\n", \
+    "  ", \
+    {color: "aqua", text: "$(x)"}, \
+    " ", \
+    {color: "aqua", text: "$(y)"}, \
+    " ", \
+    {color: "aqua", text: "$(z)"}, \
+    " ", \
+    {color: "dark_gray", text: "("}, \
+    {color: "dark_aqua", text: "$(dimension)"}, \
+    {color: "dark_gray", text: ")"}, \
+    "\n" \
+]

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "disable_dimensions",
+  "version": "__VERSION__",
+  "name": "Disable Dimensions",
+  "description": "Disable dimensions like The Nether, The End, and any further custom dimensions, with optional conditions.",
+  "authors": ["nwrenger"],
+  "contact": {
+    "homepage": "https://modrinth.com/datapack/disable-dimensions",
+    "sources": "https://github.com/nwrenger/disable-dimensions",
+    "issues": "https://github.com/nwrenger/disable-dimensions/issues"
+  },
+  "license": "GPL-3.0-or-later",
+  "icon": "pack.png",
+  "environment": "*",
+  "depends": { "fabric-resource-loader-v0": "*" }
+}

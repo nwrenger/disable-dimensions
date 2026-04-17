@@ -46,4 +46,4 @@ tellraw @s [ \
 ]
 
 # World spawn config
-function disable_dimensions:config_spawn with storage disable_dimensions:config world_spawn
+function disable_dimensions:config/world_spawn/display with storage disable_dimensions:config world_spawn

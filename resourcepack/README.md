@@ -1,14 +1,19 @@
-# Translations
+# Disable Dimensions Translations
 
 This resource pack provides translations for the **Disable Dimensions** data pack/mod.
 Contributions for additional languages are very welcome!
 
+## Supported translations
+
+- Deutsch (Deutschland) by @nwrenger (me)
+
 ## Adding a Translation
 
-1. Copy `assets/disable_dimensions/lang/de_de.json`
-2. Rename it to your language code (e.g. `en_us.json`, `fr_fr.json`)
-3. Translate the values appropiatly
-4. Open a PR on the repository
+1. Go to the [repository](https://github.com/nwrenger/disable-dimensions)
+2. Duplicate `resourcepack/assets/disable_dimensions/lang/de_de.json`
+3. Rename it to your language code (e.g. `en_us.json`, `fr_fr.json`)
+4. Translate the values appropiatly
+5. Open a PR on the repository
 
 ## Key Reference
 

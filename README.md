@@ -24,7 +24,7 @@ Allows you to disable dimensions by intercepting all known dimension-entry metho
 4. **Immersive Feedback**:
    On teleport back, players see a short action bar message, hear a subtle sound cue and get a slowness effect applied, making the experience clear and responsive without being intrusive.
 5. **Flexible and Compatible**:
-   Works as either a global mod or a world-specific data pack, fully compatible with both vanilla, modded and custom dimensions setups right out of the box.
+   Works as either a global mod or a world-specific data pack, includes built-in language support, and is fully compatible with vanilla, modded, and custom dimensions setups right out of the box.
 6. **Server-Ready**:
    Built to be reliable, grief-resistant, and completely passive, with no extra overhead through tick-based checks. Perfect for public or semi-public multiplayer servers.
 7. **Dynamic Configuration**:
@@ -41,6 +41,15 @@ After adding the data pack/mod to your world or server, you should be able to op
 ```
 
 ![about_panel](showcase/screenshots/about_panel.png)
+
+### Language Support
+
+Translated text is available for supported languages. This is mainly intended for server admins, since the configurable messages shown to players can be customized anyway.
+
+- **Mod in Single Player**: Included automatically and works out of the box.
+- **Data Pack or Server Setup**: Translations are client-side. For a dedicated server that only uses the data pack, the admin needs either the mod on their client or the separate [resource pack]() to see translated UI text.
+
+To add new translations, please refer to [this README](https://github.com/nwrenger/disable-dimensions/tree/main/resourcepack#readme).
 
 ## Configuration
 

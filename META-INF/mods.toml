@@ -4,15 +4,6 @@ loaderVersion = '[40,)'
 license = 'GPL-3.0-or-later'
 showAsResourcePack = false
 mods = [
-	{
-	    modId = 'disable_dimensions',
-		version = '__VERSION__',
-		displayName = 'Disable Dimensions',
-		description = 'Disable dimensions like The Nether, The End, and any further custom dimensions, with optional conditions.',
-		logoFile = 'pack.png',
-		updateJSONURL = 'https://api.modrinth.com/updates/pIHt096L/forge_updates.json',
-		authors = 'nwrenger',
-		displayURL = 'https://modrinth.com/datapack/disable-dimensions'
-	},
+    { modId = 'disable_dimensions', version = '__VERSION__', displayName = 'Disable Dimensions', description = 'Disable dimensions like The Nether, The End, and any further custom dimensions, with optional conditions.', logoFile = 'pack.png', updateJSONURL = 'https://api.modrinth.com/updates/pIHt096L/forge_updates.json', authors = 'nwrenger', displayURL = 'https://modrinth.com/datapack/disable-dimensions' },
 ]
 issueTrackerURL = 'https://github.com/nwrenger/disable-dimensions/issues'

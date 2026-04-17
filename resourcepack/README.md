@@ -59,11 +59,10 @@ Contributions for additional languages are very welcome!
 
 ### Config — World Spawn
 
-| Key                                                   | Description                                                  |
-| ----------------------------------------------------- | ------------------------------------------------------------ |
-| `disable_dimensions.config.world_spawn.label`         | Label shown before the world spawn coordinates               |
-| `disable_dimensions.config.world_spawn.hover.replace` | Tooltip for the replace spawn button                         |
-| `disable_dimensions.config.world_spawn.not_overworld` | Warning shown when trying to set spawn outside the overworld |
+| Key                                                   | Description                                    |
+| ----------------------------------------------------- | ---------------------------------------------- |
+| `disable_dimensions.config.world_spawn.label`         | Label shown before the world spawn coordinates |
+| `disable_dimensions.config.world_spawn.hover.replace` | Tooltip for the replace spawn button           |
 
 ### Config — Dimension Entry
 

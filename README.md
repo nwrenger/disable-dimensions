@@ -69,7 +69,7 @@ From here, you can:
 - Add custom dimension entries, see [Custom Dimensions](#custom-dimensions) for a guide
 - Remove dimension entries
 - Reset dimension entries to defaults
-- Set the World Spawn
+- Set the World Spawn, supports any dimension
 
 > A default World Spawn exists, but you **should** set it to your desired location once before production use by standing there and pressing `Replace`.
 

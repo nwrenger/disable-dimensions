@@ -23,8 +23,7 @@
   "disable_dimensions.config.hover.add_dimension": "Einen neuen Dimensionseintrag hinzufügen",
   "disable_dimensions.config.hover.reset_dimensions": "Dimensionseinträge auf Standardwerte zurücksetzen",
   "disable_dimensions.config.world_spawn.label": "Welt Spawn",
-  "disable_dimensions.config.world_spawn.hover.replace": "Klicken, um mit deiner aktuellen Position zu ersetzen",
-  "disable_dimensions.config.world_spawn.not_overworld": "Gehe in die Oberwelt zu deinem gewünschten Spawnpunkt und klicke dann erneut",
+  "disable_dimensions.config.world_spawn.hover.replace": "Klicken, um mit deiner aktuellen Position und Dimension zu ersetzen",
 
   "disable_dimensions.config.dimension.hover.remove": "Diesen Eintrag entfernen",
   "disable_dimensions.config.dimension.status.label": "Status",

@@ -10,7 +10,7 @@ $tellraw @s [ \
             "action": "run_command", "value": "function disable_dimensions:config/world_spawn/set" \
         }, \
         "hoverEvent": { \
-            "action": "show_text", "value": [{"color": "gold", "translate": "disable_dimensions.config.world_spawn.hover.replace", "fallback": "Click to replace with your current position"}] \
+            "action": "show_text", "value": [{"color": "gold", "translate": "disable_dimensions.config.world_spawn.hover.replace", "fallback": "Click to replace with your current position and dimension"}] \
         } \
     }, \
     "\n", \

@@ -24,6 +24,10 @@
   "disable_dimensions.config.hover.reset_dimensions": "Dimensionseinträge auf Standardwerte zurücksetzen",
   "disable_dimensions.config.world_spawn.label": "Welt Spawn",
   "disable_dimensions.config.world_spawn.hover.replace": "Klicken, um mit deiner aktuellen Position und Dimension zu ersetzen",
+  "disable_dimensions.config.reset.title": "Konfiguration zurückgesetzt",
+  "disable_dimensions.config.reset.description": "Die Konfiguration wurde auf die Standardwerte zurückgesetzt, weil sie nicht vorhanden, leer oder mit dieser Version inkompatibel war.",
+  "disable_dimensions.config.repair.title": "Konfiguration aktualisiert",
+  "disable_dimensions.config.repair.description": "Fehlende Standard-Konfigurationsfelder für diese Version wurden hinzugefügt.",
 
   "disable_dimensions.config.dimension.hover.remove": "Diesen Eintrag entfernen",
   "disable_dimensions.config.dimension.status.label": "Status",

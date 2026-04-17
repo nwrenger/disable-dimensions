@@ -4,7 +4,7 @@ tellraw @s [ \
         translate: "disable_dimensions.title_by_author", \
         fallback: "%1$s by %2$s", \
         with: [ \
-            {text: "Disable Dimensions", bold:true, color:"gold"}, \
+            {text: "Disable Dimensions", bold: true, color: "gold"}, \
             { \
                 text: "nwrenger", \
                 italic: true, \

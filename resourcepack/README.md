@@ -5,7 +5,7 @@ Contributions for additional languages are very welcome!
 
 ## Supported translations
 
-- Deutsch (Deutschland) by @nwrenger (me)
+- `Deutsch (Deutschland)` by @nwrenger (me)
 
 ## Adding a Translation
 
@@ -63,6 +63,15 @@ Contributions for additional languages are very welcome!
 | ----------------------------------------------------- | ---------------------------------------------- |
 | `disable_dimensions.config.world_spawn.label`         | Label shown before the world spawn coordinates |
 | `disable_dimensions.config.world_spawn.hover.replace` | Tooltip for the replace spawn button           |
+
+### Config — Reset / Repair Notices
+
+| Key                                            | Description                                                                                |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `disable_dimensions.config.reset.title`        | Title shown when the config has been reset                                                 |
+| `disable_dimensions.config.reset.description`  | Description shown when the config was reset because it was missing, empty, or incompatible |
+| `disable_dimensions.config.repair.title`       | Title shown when the config has been updated                                               |
+| `disable_dimensions.config.repair.description` | Description shown when missing default fields were added                                   |
 
 ### Config — Dimension Entry
 

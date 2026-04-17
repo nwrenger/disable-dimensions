@@ -1,4 +1,4 @@
-# Disable Dimensions Translations
+# Translations for Disable Dimensions
 
 This resource pack provides translations for the **Disable Dimensions** data pack/mod.
 Contributions for additional languages are very welcome!

@@ -81,10 +81,13 @@ Each condition requires:
 
 - `name`: A unique name for the condition.
 - `type`: Determines what the value gets checked against.
+  - `advancement`: Against the advancements of the player. The value is the advancement ID.
   - `gamemode`: Against the current gamemode. The value can be `survival`, `creative`, `adventure`, `spectator`.
   - `gametime`: Against the time the game was run. This is given in ticks, so make sure to apply a formula like this for days `day_count * 24 * 60 * 60 * 20`. This time only advances while the world is running, so server downtime will affect accuracy.
   - `item`: Against the items inside the player's inventory. It can be checked after the item id with an optional filter by item components, for example `minecraft:diamonds[count=64]`.
-  - `tag`: Against the tags of the player. You can give players custom tags, like `enter_all`, and set the value to that tag to enable/disable their entry.
+  - `score`: Against the scoreboard scores of the player. The value is given in the format `objective_name=score_value`, for example `nether_entries=5`.
+  - `tag`: Against the tags of the player. You can give players custom tags, like `enter_nether`.
+  - `team`: Against the team of the player. The value is the team name, for example `red_team`.
 - `value`: The specific value which gets checked against. Is different based on the set type.
 - `disabled`: The disabled value which overwrites the current status if the condition applies.
 

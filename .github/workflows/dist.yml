@@ -62,6 +62,7 @@ jobs:
           cp resourcepack/pack.mcmeta .resourcepack-build/pack.mcmeta
           cp pack.png .resourcepack-build/pack.png
           cp -r resourcepack/assets .resourcepack-build/assets
+          cp LICENSE .resourcepack-build/LICENSE
 
       - name: Create resourcepack zip
         shell: bash
@@ -73,7 +74,8 @@ jobs:
             zip -r "../${{ steps.vars.outputs.RESOURCEPACK_NAME }}" \
               pack.mcmeta \
               pack.png \
-              assets
+              assets \
+              LICENSE
           )
 
       - name: Create datapack zip
@@ -85,7 +87,8 @@ jobs:
             pack.mcmeta \
             pack.png \
             overlay_* \
-            data
+            data \
+            LICENSE
 
       - name: Inject release version into mod metadata
         shell: bash
@@ -120,7 +123,7 @@ jobs:
           cp -r META-INF .mod-build/META-INF
           cp fabric.mod.json .mod-build/fabric.mod.json
           cp quilt.mod.json .mod-build/quilt.mod.json
-
+          cp LICENSE .mod-build/LICENSE
           (
             cd .mod-build
             zip -r "../${{ steps.vars.outputs.JAR_NAME }}" .

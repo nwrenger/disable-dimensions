@@ -13,6 +13,7 @@
         "sources": "https://github.com/nwrenger/disable-dimensions",
         "issues": "https://github.com/nwrenger/disable-dimensions/issues"
       },
+      "license": "LGPL-3.0-or-later",
       "icon": "pack.png"
     },
     "intermediate_mappings": "net.fabricmc:intermediary",

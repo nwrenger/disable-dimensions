@@ -2,8 +2,8 @@
   "pack": {
     "pack_format": 88,
     "min_format": 48,
-    "max_format": [101, 1],
-    "supported_formats": { "min_inclusive": 48, "max_inclusive": 101 },
+    "max_format": [107, 1],
+    "supported_formats": { "min_inclusive": 48, "max_inclusive": 107 },
     "description": {
       "translate": "disable_dimensions.description.data_pack",
       "fallback": "Disable dimensions like The Nether, The End, and any further custom dimensions, with optional conditions"

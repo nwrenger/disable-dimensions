@@ -98,19 +98,19 @@ Each condition requires:
 
 Here are three examples of conditions for `minecraft:the_nether`:
 
-1. **Enable after three days**
+**Enable after three days**
 
 ```mcfunction
 /function disable_dimensions:config/dimension/condition/add {id:"minecraft:the_nether",name:"3d Enable",type:"gametime",value:"5184000", disabled:"false"}
 ```
 
-2. **Enable for creative mode**
+**Enable for creative mode**
 
 ```mcfunction
 /function disable_dimensions:config/dimension/condition/add {id:"minecraft:the_nether",name:"Allow Creative",type:"gamemode",value:"creative", disabled:"false"}
 ```
 
-3. **Disable after 7 in-game days**
+**Disable after 7 in-game days**
 
 ```mcfunction
 /function disable_dimensions:config/dimension/condition/add {id:"minecraft:the_nether",name:"7d Disable",type:"day",value:"7", disabled:"true"}
@@ -132,13 +132,13 @@ Each entry requires:
 
 Here are two examples of adding a custom dimension:
 
-1. **The Aether**
+**The Aether**
 
 ```mcfunction
 /function disable_dimensions:config/dimension/add {name: "The Aether", id: "aether:the_aether", type: "respawn", message_color: "aqua", message_text:"A radiant force from the heavens bars your ascent..."}
 ```
 
-2. **ATM10 - The Other**
+**ATM10 - The Other**
 
 ```mcfunction
 /function disable_dimensions:config/dimension/add {name: "The Other", id: "allthemodium:the_other", type: "respawn", message_color: "dark_purple", message_text:"A mysterious force from The Other prevents your entry..."}

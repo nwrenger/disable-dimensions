@@ -18,7 +18,7 @@ Official translations for the **Disable Dimensions** data pack/mod. Contribution
 
 The default fallback strings are provided directly in the data pack commands, so `en_us.json` is intentionally not included.
 
-Translations marked as AI-generated were created with AI assistance and have not yet been fully reviewed by a native speaker. They may contain mistakes, awkward phrasing, or missing context, so corrections are especially welcome.
+Translations marked as AI-generated were created with AI assistance and have not yet been fully reviewed by a native speaker. They are very likely to contain mistakes, awkward phrasing, or missing context, so corrections are especially welcome.
 
 ## Adding a Translation
 

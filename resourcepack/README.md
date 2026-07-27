@@ -1,19 +1,40 @@
 # Translations for Disable Dimensions
 
-Official translations for the **Disable Dimensions** data pack/mod.
-Contributions for additional languages are very welcome!
+Official translations for the **Disable Dimensions** data pack/mod. Contributions for improving existing translations or adding new languages are very welcome!
 
 ## Supported translations
 
-- `Deutsch (Deutschland)` by @nwrenger (me)
+- `Deutsch (Deutschland)` by @nwrenger
+- `Español (España)` AI-generated
+- `Français (France)` AI-generated
+- `Italiano (Italia)` AI-generated
+- `日本語 (日本)` AI-generated
+- `한국어 (대한민국)` AI-generated
+- `Nederlands (Nederland)` AI-generated
+- `Polski (Polska)` AI-generated
+- `Português (Brasil)` AI-generated
+- `Русский (Россия)` AI-generated
+- `简体中文 (中国大陆)` AI-generated
+
+The default fallback strings are provided directly in the data pack commands, so `en_us.json` is intentionally not included.
+
+Translations marked as AI-generated were created with AI assistance and have not yet been fully reviewed by a native speaker. They may contain mistakes, awkward phrasing, or missing context, so corrections are especially welcome.
 
 ## Adding a Translation
 
 1. Go to the [repository](https://github.com/nwrenger/disable-dimensions)
 2. Duplicate `resourcepack/assets/disable_dimensions/lang/de_de.json`
-3. Rename it to your language code (e.g. `en_us.json`, `fr_fr.json`)
-4. Translate the values appropiatly
+3. Rename it to your Minecraft language code (e.g. `fr_fr.json`, `es_mx.json`)
+4. Translate the values appropriately
 5. Open a PR on the repository
+
+## Updating a Translation
+
+- Keep every key from the source file, even if a value has not been translated yet.
+- Preserve placeholders such as `%1$s`, `%2$s`, and `%3$s` exactly.
+- Preserve the formatting expectations: short labels should stay short, and tooltip text should be clear in chat UI.
+- Use UTF-8 JSON without comments or trailing commas.
+- If a phrase sounds awkward because of placeholder order, reorder the placeholders instead of changing or removing them.
 
 ## Key Reference
 

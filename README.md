@@ -47,7 +47,7 @@ After adding the data pack/mod to your world or server, you should be able to op
 Translated text is available for supported languages. This is mainly intended for server admins, since the configurable messages shown to players can be customized anyway.
 
 - **Mod in Single Player**: Included automatically and works out of the box.
-- **Data Pack or Server Setup**: Translations are client-side. For a dedicated server that only uses the data pack, the admin needs either the mod on their client or the separate [resource pack]() to see translated UI text.
+- **Data Pack or Server Setup**: Translations are client-side. For a dedicated server that only uses the data pack, the admin needs either the mod on their client or the separate [resource pack](https://modrinth.com/resourcepack/translations-for-disable-dimensions) to see translated UI text.
 
 To add new translations, please refer to [this README](https://github.com/nwrenger/disable-dimensions/tree/main/resourcepack#readme).
 
@@ -81,26 +81,27 @@ Each condition requires:
 
 - `name`: A unique name for the condition.
 - `type`: Determines what the value gets checked against.
-  - `advancement`: Against the advancements of the player. The value is the advancement ID.
-  - `gamemode`: Against the current gamemode. The value can be `survival`, `creative`, `adventure`, `spectator`.
-  - `gametime`: Against the time the game was run. This is given in ticks, so make sure to apply a formula like this for days `day_count * 24 * 60 * 60 * 20`. This time only advances while the world is running, so server downtime will affect accuracy.
-  - `item`: Against the items inside the player's inventory. It can be checked after the item id with an optional filter by item components, for example `minecraft:diamonds[count=64]`.
-  - `score`: Against the scoreboard scores of the player. The value is given in the format `objective_name=score_value`, for example `nether_entries=5`.
-  - `tag`: Against the tags of the player. You can give players custom tags, like `enter_nether`.
-  - `team`: Against the team of the player. The value is the team name, for example `red_team`.
-- `value`: The specific value which gets checked against. Is different based on the set type.
+  - `advancement`: Checks the player's advancements. The value is the advancement ID.
+  - `day`: Checks the in-game day count. The value is the exact day number.
+  - `gamemode`: Checks the player's current gamemode. The value can be `survival`, `creative`, `adventure`, or `spectator`.
+  - `gametime`: Checks how long the world has been running. The value is given in ticks, so use a formula like `day_count * 24 * 60 * 60 * 20` for days. This time only advances while the world is running, so server downtime affects accuracy.
+  - `item`: Checks the items inside the player's inventory. The value is an item ID with an optional item component filter, for example `minecraft:diamond[count=64]`.
+  - `score`: Checks the player's scoreboard scores. The value uses the format `objective_name=score_value`, for example `nether_entries=5`.
+  - `tag`: Checks the player's tags. You can give players custom tags, like `enter_nether`.
+  - `team`: Checks the player's team. The value is the team name, for example `red_team`.
+- `value`: The specific value to check. Its format depends on the selected type.
 - `disabled`: The disabled value which overwrites the current status if the condition applies.
 
 > If you have multiple conditions, only one of them needs to be true to overwrite the current status.
 
-> It's not adviced to have multiple conditions which can cancel each other out, like both applying for the current player but one enabling and the other one disabling travel. This will result in unexpectable behavior.
+> Avoid conditions that can cancel each other out, such as two conditions that both apply to the current player while one enables travel and the other disables it. This can result in unexpected behavior.
 
 Here are three examples of conditions for `minecraft:the_nether`:
 
-1. **Enable after one day**
+1. **Enable after three days**
 
 ```mcfunction
-/function disable_dimensions:config/dimension/condition/add {id:"minecraft:the_nether",name:"1d Enable",type:"gametime",value:"1728000", disabled:"false"}
+/function disable_dimensions:config/dimension/condition/add {id:"minecraft:the_nether",name:"3d Enable",type:"gametime",value:"5184000", disabled:"false"}
 ```
 
 2. **Enable for creative mode**
@@ -109,10 +110,10 @@ Here are three examples of conditions for `minecraft:the_nether`:
 /function disable_dimensions:config/dimension/condition/add {id:"minecraft:the_nether",name:"Allow Creative",type:"gamemode",value:"creative", disabled:"false"}
 ```
 
-3. **Disable after 7 days**
+3. **Disable after 7 in-game days**
 
 ```mcfunction
-/function disable_dimensions:config/dimension/condition/add {id:"minecraft:the_nether",name:"7d Disable",type:"gametime",value:"12096000", disabled:"true"}
+/function disable_dimensions:config/dimension/condition/add {id:"minecraft:the_nether",name:"7d Disable",type:"day",value:"7", disabled:"true"}
 ```
 
 ### Custom Dimensions

@@ -4,7 +4,7 @@ Official translations for the **Disable Dimensions** data pack/mod. Contribution
 
 ## Supported translations
 
-- `Deutsch (Deutschland)` by @nwrenger
+- `Deutsch (Deutschland)` by @nwrenger (Author)
 - `Español (España)` AI-generated
 - `Français (France)` AI-generated
 - `Italiano (Italia)` AI-generated

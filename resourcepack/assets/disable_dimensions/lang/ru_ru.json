@@ -5,10 +5,12 @@
   "disable_dimensions.enabled": "включено",
   "disable_dimensions.disabled": "отключено",
   "disable_dimensions.title_by_author": "%1$s от %2$s",
+
   "disable_dimensions.about.other_projects": "Посмотрите мои другие проекты на",
   "disable_dimensions.about.issue_prefix": "Если у вас возникла проблема с этим пакетом, сообщите о ней",
   "disable_dimensions.about.issue_link": "здесь",
   "disable_dimensions.about.config": "Чтобы настроить этот пакет, используйте",
+
   "disable_dimensions.action.add": "Добавить",
   "disable_dimensions.action.edit": "Изменить",
   "disable_dimensions.action.toggle": "Переключить",
@@ -16,6 +18,7 @@
   "disable_dimensions.action.reset": "Сбросить",
   "disable_dimensions.action.replace": "Заменить",
   "disable_dimensions.action.remove": "Удалить",
+
   "disable_dimensions.config.title": "Конфигурация",
   "disable_dimensions.config.hover.add_dimension": "Добавить новую запись измерения",
   "disable_dimensions.config.hover.reset_dimensions": "Сбросить записи измерений к значениям по умолчанию",
@@ -25,6 +28,7 @@
   "disable_dimensions.config.reset.description": "Конфигурация была сброшена к значениям по умолчанию, потому что она отсутствовала, была пустой или несовместимой с этой версией.",
   "disable_dimensions.config.repair.title": "Конфигурация обновлена",
   "disable_dimensions.config.repair.description": "Добавлены отсутствующие стандартные поля конфигурации для этой версии.",
+
   "disable_dimensions.config.dimension.hover.remove": "Удалить эту запись",
   "disable_dimensions.config.dimension.status.label": "Статус",
   "disable_dimensions.config.dimension.status.pattern": "Вход в %1$s теперь %2$s %3$s",
@@ -32,6 +36,7 @@
   "disable_dimensions.config.dimension.message.hover.edit": "Изменить текст/цвет сообщения",
   "disable_dimensions.config.dimension.conditions.label": "Условия",
   "disable_dimensions.config.dimension.conditions.hover.add": "Добавить новую запись условия",
+
   "disable_dimensions.config.condition.hover.remove": "Удалить это условие",
   "disable_dimensions.config.condition.status.label": "Изменённый статус",
   "disable_dimensions.config.condition.status.pattern": "Когда %1$s, вход становится %2$s",

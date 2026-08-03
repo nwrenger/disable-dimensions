@@ -5,10 +5,12 @@
   "disable_dimensions.enabled": "已启用",
   "disable_dimensions.disabled": "已禁用",
   "disable_dimensions.title_by_author": "%1$s 作者：%2$s",
+
   "disable_dimensions.about.other_projects": "在此查看我的其他项目",
   "disable_dimensions.about.issue_prefix": "如果你在使用此包时遇到问题，请在此反馈",
   "disable_dimensions.about.issue_link": "这里",
   "disable_dimensions.about.config": "要配置此包，请使用",
+
   "disable_dimensions.action.add": "添加",
   "disable_dimensions.action.edit": "编辑",
   "disable_dimensions.action.toggle": "切换",
@@ -16,6 +18,7 @@
   "disable_dimensions.action.reset": "重置",
   "disable_dimensions.action.replace": "替换",
   "disable_dimensions.action.remove": "移除",
+
   "disable_dimensions.config.title": "配置",
   "disable_dimensions.config.hover.add_dimension": "添加新的维度条目",
   "disable_dimensions.config.hover.reset_dimensions": "将维度条目重置为默认值",
@@ -25,6 +28,7 @@
   "disable_dimensions.config.reset.description": "配置已重置为默认值，因为它不存在、为空或与此版本不兼容。",
   "disable_dimensions.config.repair.title": "配置已更新",
   "disable_dimensions.config.repair.description": "已添加此版本缺失的默认配置字段。",
+
   "disable_dimensions.config.dimension.hover.remove": "移除此条目",
   "disable_dimensions.config.dimension.status.label": "状态",
   "disable_dimensions.config.dimension.status.pattern": "进入 %1$s %2$s%3$s",
@@ -32,6 +36,7 @@
   "disable_dimensions.config.dimension.message.hover.edit": "编辑消息文本/颜色",
   "disable_dimensions.config.dimension.conditions.label": "条件",
   "disable_dimensions.config.dimension.conditions.hover.add": "添加新的条件条目",
+
   "disable_dimensions.config.condition.hover.remove": "移除此条件",
   "disable_dimensions.config.condition.status.label": "更改后的状态",
   "disable_dimensions.config.condition.status.pattern": "当%1$s时，进入会变为%2$s",

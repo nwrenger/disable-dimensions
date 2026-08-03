@@ -5,10 +5,12 @@
   "disable_dimensions.enabled": "activé",
   "disable_dimensions.disabled": "désactivé",
   "disable_dimensions.title_by_author": "%1$s par %2$s",
+
   "disable_dimensions.about.other_projects": "Découvre mes autres projets sur",
   "disable_dimensions.about.issue_prefix": "Si tu rencontres un problème avec ce pack, signale-le",
   "disable_dimensions.about.issue_link": "ici",
   "disable_dimensions.about.config": "Pour configurer ce pack, utilise",
+
   "disable_dimensions.action.add": "Ajouter",
   "disable_dimensions.action.edit": "Modifier",
   "disable_dimensions.action.toggle": "Basculer",
@@ -16,6 +18,7 @@
   "disable_dimensions.action.reset": "Réinitialiser",
   "disable_dimensions.action.replace": "Remplacer",
   "disable_dimensions.action.remove": "Supprimer",
+
   "disable_dimensions.config.title": "Configuration",
   "disable_dimensions.config.hover.add_dimension": "Ajouter une nouvelle entrée de dimension",
   "disable_dimensions.config.hover.reset_dimensions": "Réinitialiser les entrées de dimension par défaut",
@@ -25,6 +28,7 @@
   "disable_dimensions.config.reset.description": "La configuration a été réinitialisée aux valeurs par défaut, car elle était absente, vide ou incompatible avec cette version.",
   "disable_dimensions.config.repair.title": "Configuration mise à jour",
   "disable_dimensions.config.repair.description": "Les champs de configuration par défaut manquants pour cette version ont été ajoutés.",
+
   "disable_dimensions.config.dimension.hover.remove": "Supprimer cette entrée",
   "disable_dimensions.config.dimension.status.label": "Statut",
   "disable_dimensions.config.dimension.status.pattern": "L’entrée dans %1$s est %2$s %3$s",
@@ -32,6 +36,7 @@
   "disable_dimensions.config.dimension.message.hover.edit": "Modifier le texte/la couleur du message",
   "disable_dimensions.config.dimension.conditions.label": "Conditions",
   "disable_dimensions.config.dimension.conditions.hover.add": "Ajouter une nouvelle entrée de condition",
+
   "disable_dimensions.config.condition.hover.remove": "Supprimer cette condition",
   "disable_dimensions.config.condition.status.label": "Statut modifié",
   "disable_dimensions.config.condition.status.pattern": "Quand %1$s, l’entrée devient %2$s",

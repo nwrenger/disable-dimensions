@@ -5,10 +5,12 @@
   "disable_dimensions.enabled": "ingeschakeld",
   "disable_dimensions.disabled": "uitgeschakeld",
   "disable_dimensions.title_by_author": "%1$s door %2$s",
+
   "disable_dimensions.about.other_projects": "Bekijk mijn andere projecten op",
   "disable_dimensions.about.issue_prefix": "Als je een probleem hebt met dit pakket, meld het",
   "disable_dimensions.about.issue_link": "hier",
   "disable_dimensions.about.config": "Gebruik dit om dit pakket te configureren",
+
   "disable_dimensions.action.add": "Toevoegen",
   "disable_dimensions.action.edit": "Bewerken",
   "disable_dimensions.action.toggle": "Omschakelen",
@@ -16,6 +18,7 @@
   "disable_dimensions.action.reset": "Resetten",
   "disable_dimensions.action.replace": "Vervangen",
   "disable_dimensions.action.remove": "Verwijderen",
+
   "disable_dimensions.config.title": "Configuratie",
   "disable_dimensions.config.hover.add_dimension": "Een nieuwe dimensievermelding toevoegen",
   "disable_dimensions.config.hover.reset_dimensions": "Dimensievermeldingen resetten naar standaardwaarden",
@@ -25,6 +28,7 @@
   "disable_dimensions.config.reset.description": "De configuratie is gereset naar de standaardwaarden omdat deze ontbrak, leeg was of niet compatibel was met deze versie.",
   "disable_dimensions.config.repair.title": "Configuratie bijgewerkt",
   "disable_dimensions.config.repair.description": "Ontbrekende standaardconfiguratievelden voor deze versie zijn toegevoegd.",
+
   "disable_dimensions.config.dimension.hover.remove": "Deze vermelding verwijderen",
   "disable_dimensions.config.dimension.status.label": "Status",
   "disable_dimensions.config.dimension.status.pattern": "Betreden van %1$s is %2$s %3$s",
@@ -32,6 +36,7 @@
   "disable_dimensions.config.dimension.message.hover.edit": "Berichttekst/-kleur bewerken",
   "disable_dimensions.config.dimension.conditions.label": "Voorwaarden",
   "disable_dimensions.config.dimension.conditions.hover.add": "Een nieuwe voorwaardevermelding toevoegen",
+
   "disable_dimensions.config.condition.hover.remove": "Deze voorwaarde verwijderen",
   "disable_dimensions.config.condition.status.label": "Gewijzigde status",
   "disable_dimensions.config.condition.status.pattern": "Wanneer %1$s, wordt toegang %2$s",

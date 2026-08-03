@@ -5,10 +5,12 @@
   "disable_dimensions.enabled": "abilitato",
   "disable_dimensions.disabled": "disabilitato",
   "disable_dimensions.title_by_author": "%1$s di %2$s",
+
   "disable_dimensions.about.other_projects": "Guarda gli altri miei progetti su",
   "disable_dimensions.about.issue_prefix": "Se hai un problema con questo pacchetto, segnalalo",
   "disable_dimensions.about.issue_link": "qui",
   "disable_dimensions.about.config": "Per configurare questo pacchetto usa",
+
   "disable_dimensions.action.add": "Aggiungi",
   "disable_dimensions.action.edit": "Modifica",
   "disable_dimensions.action.toggle": "Attiva/disattiva",
@@ -16,6 +18,7 @@
   "disable_dimensions.action.reset": "Reimposta",
   "disable_dimensions.action.replace": "Sostituisci",
   "disable_dimensions.action.remove": "Rimuovi",
+
   "disable_dimensions.config.title": "Configurazione",
   "disable_dimensions.config.hover.add_dimension": "Aggiungi una nuova voce dimensione",
   "disable_dimensions.config.hover.reset_dimensions": "Reimposta le voci dimensione ai valori predefiniti",
@@ -25,6 +28,7 @@
   "disable_dimensions.config.reset.description": "La configurazione è stata reimpostata ai valori predefiniti perché mancava, era vuota o incompatibile con questa versione.",
   "disable_dimensions.config.repair.title": "Configurazione aggiornata",
   "disable_dimensions.config.repair.description": "Sono stati aggiunti i campi di configurazione predefiniti mancanti per questa versione.",
+
   "disable_dimensions.config.dimension.hover.remove": "Rimuovi questa voce",
   "disable_dimensions.config.dimension.status.label": "Stato",
   "disable_dimensions.config.dimension.status.pattern": "L’ingresso in %1$s è %2$s %3$s",
@@ -32,6 +36,7 @@
   "disable_dimensions.config.dimension.message.hover.edit": "Modifica testo/colore del messaggio",
   "disable_dimensions.config.dimension.conditions.label": "Condizioni",
   "disable_dimensions.config.dimension.conditions.hover.add": "Aggiungi una nuova voce condizione",
+
   "disable_dimensions.config.condition.hover.remove": "Rimuovi questa condizione",
   "disable_dimensions.config.condition.status.label": "Stato modificato",
   "disable_dimensions.config.condition.status.pattern": "Quando %1$s, l’ingresso diventa %2$s",

@@ -6,6 +6,7 @@ Official translations for the **Disable Dimensions** data pack/mod. Contribution
 
 - `Deutsch (Deutschland)` by @nwrenger (Author)
 - `Español (España)` AI-generated
+- `Español (México)` by @Ferbook3000 (Contributor)
 - `Français (France)` AI-generated
 - `Italiano (Italia)` AI-generated
 - `日本語 (日本)` AI-generated

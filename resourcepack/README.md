@@ -5,21 +5,11 @@ Official translations for the **Disable Dimensions** data pack/mod. Contribution
 ## Supported translations
 
 - `Deutsch (Deutschland)` by @nwrenger (Author)
-- `Español (España)` AI-generated
 - `Español (México)` by @Ferbook3000 (Contributor)
-- `Français (France)` AI-generated
-- `Italiano (Italia)` AI-generated
-- `日本語 (日本)` AI-generated
-- `한국어 (대한민국)` AI-generated
-- `Nederlands (Nederland)` AI-generated
-- `Polski (Polska)` AI-generated
-- `Português (Brasil)` AI-generated
-- `Русский (Россия)` AI-generated
-- `简体中文 (中国大陆)` AI-generated
 
 The default fallback strings are provided directly in the data pack commands, so `en_us.json` is intentionally not included.
 
-Translations marked as AI-generated were created with AI assistance and have not yet been fully reviewed by a native speaker. They are very likely to contain mistakes, awkward phrasing, or missing context, so corrections are especially welcome.
+As you can see, not many translations are available yet. Therefore, I encourage you to contribute your own translation if you are a native speaker (or at the quality of one). I won't accept **AI generated** translations!
 
 ## Adding a Translation
 

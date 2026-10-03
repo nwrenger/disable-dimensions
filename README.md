@@ -4,7 +4,7 @@
 [![modrinth](https://img.shields.io/badge/dynamic/json?url=https://api.modrinth.com/v2/project/disable-dimensions&label=downloads&query=$.downloads&color=#00AF5C)](https://modrinth.com/datapack/disable-dimensions)
 [![modrinth](https://img.shields.io/modrinth/game-versions/disable-dimensions.svg)](https://modrinth.com/datapack/disable-dimensions)
 
-[✦ **The official successor, Disable Dimensions Reimagined, just got released here** ✦](https://www.curseforge.com/minecraft/mc-mods/disable-dimensions-reimagined)
+[✦ **The official successor, Disable Dimensions Reimagined, just got released here** ✦](https://github.com/nwrenger/disable-dimensions-reimagined)
 
 A **hard-to-break, grief-resistant solution** for preventing players from entering **The Nether**, **The End**, and any further **custom dimensions**, with optional per-dimension **conditions**.
 
